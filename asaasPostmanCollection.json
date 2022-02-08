@@ -1,0 +1,3303 @@
+{
+	"info": {
+		"_postman_id": "34183c23-2b1e-4cf1-a3c5-db62dae4dd69",
+		"name": "API ASAAS v3",
+		"description": "Nós aqui do Asaas adoramos poupar tempo de todo mundo, por isso fizemos essa collection com todas as nossas APIs. 👍\n\n# Documentação\n\n  \nA documentação completa pode ser acessada [neste link.](https://asaasv3.docs.apiary.io/)\n\nAmbientes disponíveis:\n\n*   Local\n*   Sandbox\n*   Produção\n    \n\nNão esquece de consultar as variáveis da coleção.\n\n## Autenticação\n\nPara testar os exemplos aqui descritos é necessário ter uma conta no Asaas. Caso você ainda não tenha, basta [criar uma conta clicando aqui](https://www.asaas.com/onboarding/createAccount?utm_source=postman) ou [aqui para criar em nossa sandbox](https://sandbox.asaas.com/onboarding/createAccount).\n\nA autenticação é feita através do fornecimento da sua API Key. Ela deve ser transmitida em todas as requisições no header \\`access_token\\`. Caso a API Key seja inválida ou não seja informada, o Asaas retornará `HTTP 401`.  \nAs API Keys são distintas entre os ambientes de Sandbox e Produção, portanto lembre-se de alterá-la quando mudar a URL.  \nPara obter sua API Key [acesse a Aba Integração na área Minha Conta](https://www.asaas.com/config/index?tab=pushNotification).  \nNa collection sua API Key pode ser informada na área de ambientes.\n\n> ***Atenção***:  \n> Sua API Key carrega muitos privilégios, portanto certifique-se de mantê-la protegida. Não informe ela em atendimentos e nem a exponha no front-end da sua aplicação. Além disso, não é possível recuperá-la caso perdida, sendo necessário a geração de uma nova.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Criar novo cliente",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Marcelo Almeida\",\r\n  \"email\": \"marcelo.almeida@gmail.com\",\r\n  \"phone\": \"4738010919\",\r\n  \"mobilePhone\": \"4799376637\",\r\n  \"cpfCnpj\": \"24971563792\",\r\n  \"postalCode\": \"01310-000\",\r\n  \"address\": \"Av. Paulista\",\r\n  \"addressNumber\": \"150\",\r\n  \"complement\": \"Sala 201\",\r\n  \"province\": \"Centro\",\r\n  \"externalReference\": \"12987382\",\r\n  \"notificationDisabled\": false,\r\n  \"additionalEmails\": \"marcelo.almeida2@gmail.com,marcelo.almeida3@gmail.com\",\r\n  \"municipalInscription\": \"46683695908\",\r\n  \"stateInscription\": \"646681195275\",\r\n  \"observations\": \"ótimo pagador, nenhum problema até o momento\"\r\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/customers",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recuperar um único cliente",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/customers/{{id_do_cliente}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"customers",
+								"{{id_do_cliente}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar clientes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/customers",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"customers"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "cpfCnpj",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "groupName",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "externalReference",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar cliente existente",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Marcelo Almeida\",\r\n  \"email\": \"marcelo.almeida@gmail.com\",\r\n  \"phone\": \"4738010919\",\r\n  \"mobilePhone\": \"4799376637\",\r\n  \"cpfCnpj\": \"24971563792\",\r\n  \"postalCode\": \"01310-000\",\r\n  \"address\": \"Av. Paulista\",\r\n  \"addressNumber\": \"150\",\r\n  \"complement\": \"Sala 201\",\r\n  \"province\": \"Centro\",\r\n  \"externalReference\": \"12987382\",\r\n  \"notificationDisabled\": false,\r\n  \"additionalEmails\": \"marcelo.almeida2@gmail.com,marcelo.almeida3@gmail.com\",\r\n  \"municipalInscription\": \"46683695908\",\r\n  \"stateInscription\": \"646681195275\"\r\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/customers/{{id_do_cliente}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"customers",
+								"{{id_do_cliente}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/customers/{{id_do_cliente}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"customers",
+								"{{id_do_cliente}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restaurar cliente removido",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/customers/{{id_do_cliente}}/restore",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"customers",
+								"{{id_do_cliente}}",
+								"restore"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cobranças",
+			"item": [
+				{
+					"name": "Criar nova cobrança",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"customer\": \"{CUSTOMER_ID}\",\r\n  \"billingType\": \"BOLETO\",\r\n  \"dueDate\": \"2017-06-10\",\r\n  \"value\": 100,\r\n  \"description\": \"Pedido 056984\",\r\n  \"externalReference\": \"056984\",\r\n  \"discount\": {\r\n    \"value\": 10,\r\n    \"dueDateLimitDays\": 0\r\n  },\r\n  \"fine\": {\r\n    \"value\": 1\r\n  },\r\n  \"interest\": {\r\n    \"value\": 2\r\n  },\r\n  \"postalService\": false\r\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/payments",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"payments"
+							]
+						},
+						"description": "Cria uma nova cobrança. É possível escolher entre as formas de pagamento com boleto, cartão de crédito, Pix ou permitir que o cliente escolha a forma que desejar."
+					},
+					"response": []
+				},
+				{
+					"name": "Criar cobrança com cartão de crédito",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"customer\": \"cus_0T1mdomVMi39\",\r\n  \"billingType\": \"CREDIT_CARD\",\r\n  \"dueDate\": \"2017-03-15\",\r\n  \"value\": 100,\r\n  \"description\": \"Pedido 056984\",\r\n  \"externalReference\": \"056984\",\r\n  \"creditCard\": {\r\n    \"holderName\": \"marcelo h almeida\",\r\n    \"number\": \"5162306219378829\",\r\n    \"expiryMonth\": \"05\",\r\n    \"expiryYear\": \"2021\",\r\n    \"ccv\": \"318\"\r\n  },\r\n  \"creditCardHolderInfo\": {\r\n    \"name\": \"Marcelo Henrique Almeida\",\r\n    \"email\": \"marcelo.almeida@gmail.com\",\r\n    \"cpfCnpj\": \"24971563792\",\r\n    \"postalCode\": \"89223-005\",\r\n    \"addressNumber\": \"277\",\r\n    \"addressComplement\": null,\r\n    \"phone\": \"4738010919\",\r\n    \"mobilePhone\": \"47998781877\"\r\n  },\r\n  \"creditCardToken\": \"76496073-536f-4835-80db-c45d00f33695\"\r\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/payments",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar uma cobrança parcelada",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"customer\": \"{CUSTOMER_ID}\",\r\n  \"billingType\": \"BOLETO\",\r\n  \"installmentCount\": 6,\r\n  \"installmentValue\": 20,\r\n  \"totalValue\": 120,\r\n  \"dueDate\": \"2017-06-10\",\r\n  \"description\": \"Pedido 056984\",\r\n  \"externalReference\": \"056984\",\r\n  \"discount\": {\r\n    \"value\": 10,\r\n    \"dueDateLimitDays\": 0\r\n  },\r\n  \"fine\": {\r\n    \"value\": 1\r\n  },\r\n  \"interest\": {\r\n    \"value\": 2\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/payments",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar cobrança com split",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"customer\": \"{CUSTOMER_ID}\",\r\n  \"billingType\": \"BOLETO\",\r\n  \"dueDate\": \"2017-06-10\",\r\n  \"value\": 100,\r\n  \"description\": \"Pedido 056984\",\r\n  \"externalReference\": \"056984\",\r\n  \"split\": [\r\n    {\r\n      \"walletId\": \"48548710-9baa-4ec1-a11f-9010193527c6\",\r\n      \"fixedValue\": 20\r\n    },\r\n    {\r\n      \"walletId\": \"0b763922-aa88-4cbe-a567-e3fe8511fa06\",\r\n      \"percentualValue\": 10\r\n    }\r\n  ]\r\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/payments",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recuperar uma única cobrança",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/payments/{{id_da_cobranca}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"payments",
+								"{{id_da_cobranca}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar cobranças",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/payments?customer=&billingType=&status=&subscription=&installment=&externalReference=&paymentDate=&anticipated=&paymentDate%5Bge%5D=&paymentDate%5Ble%5D=&dueDate%5Bge%5D=&dueDate%5Ble%5D=&offset=&limit=",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"payments"
+							],
+							"query": [
+								{
+									"key": "customer",
+									"value": ""
+								},
+								{
+									"key": "billingType",
+									"value": ""
+								},
+								{
+									"key": "status",
+									"value": ""
+								},
+								{
+									"key": "subscription",
+									"value": ""
+								},
+								{
+									"key": "installment",
+									"value": ""
+								},
+								{
+									"key": "externalReference",
+									"value": ""
+								},
+								{
+									"key": "paymentDate",
+									"value": ""
+								},
+								{
+									"key": "anticipated",
+									"value": ""
+								},
+								{
+									"key": "paymentDate%5Bge%5D",
+									"value": ""
+								},
+								{
+									"key": "paymentDate%5Ble%5D",
+									"value": ""
+								},
+								{
+									"key": "dueDate%5Bge%5D",
+									"value": ""
+								},
+								{
+									"key": "dueDate%5Ble%5D",
+									"value": ""
+								},
+								{
+									"key": "offset",
+									"value": ""
+								},
+								{
+									"key": "limit",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar cobrança existente",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"billingType\": \"BOLETO\",\r\n  \"dueDate\": \"2017-06-10\",\r\n  \"value\": 100,\r\n  \"description\": \"Pedido 056984\",\r\n  \"externalReference\": \"056984\",\r\n  \"discount\": {\r\n    \"value\": 10,\r\n    \"dueDateLimitDays\": 0\r\n  },\r\n  \"fine\": {\r\n    \"value\": 1\r\n  },\r\n  \"interest\": {\r\n    \"value\": 2\r\n  },\r\n  \"postalService\": false\r\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/payments/{{id_da_cobranca}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"payments",
+								"{{id_da_cobranca}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover cobrança",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/payments/{{id_da_cobranca}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"payments",
+								"{{id_da_cobranca}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restaurar cobrança removida",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/payments/{{id_da_cobranca}}/restore",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"payments",
+								"{{id_da_cobranca}}",
+								"restore"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Estornar cobrança",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/payments/{{id_da_cobranca}}/refund",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"payments",
+								"{{id_da_cobranca}}",
+								"refund"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter linha digitável do boleto",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "string"
+							}
+						],
+						"url": {
+							"raw": "https://www.asaas.com/api/v3/payments",
+							"protocol": "https",
+							"host": [
+								"www",
+								"asaas",
+								"com"
+							],
+							"path": [
+								"api",
+								"v3",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter QR Code PIX",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/payments/{{id_da_cobranca}}/pixQrCode",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"payments",
+								"{{id_da_cobranca}}",
+								"pixQrCode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Confirmar recebimento em dinheiro",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/payments/{{id_da_cobranca}}/receiveInCash",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"payments",
+								"{{id_da_cobranca}}",
+								"receiveInCash"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Desfazer confirmação de recebimento em dinheiro",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/payments/{{id_da_cobranca}}/undoReceivedInCash",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"payments",
+								"{{id_da_cobranca}}",
+								"undoReceivedInCash"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Parcelamentos",
+			"item": [
+				{
+					"name": "Recuperar um único parcelamento",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/installments/{{id_da_parcela}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"installments",
+								"{{id_da_parcela}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar parcelamentos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/installments?offset=&limit=",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"installments"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": ""
+								},
+								{
+									"key": "limit",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover parcelamento",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/installments/{{id_da_parcela}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"installments",
+								"{{id_da_parcela}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Estornar parcelamento",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/installments/{{id_da_parcela}}/refund",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"installments",
+								"{{id_da_parcela}}",
+								"refund"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Assinaturas",
+			"item": [
+				{
+					"name": "Criar nova assinatura",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"customer\": \"{CUSTOMER_ID}\",\r\n  \"billingType\": \"BOLETO\",\r\n  \"nextDueDate\": \"2017-05-15\",\r\n  \"value\": 19.9,\r\n  \"cycle\": \"MONTHLY\",\r\n  \"description\": \"Assinatura Plano Pró\",\r\n  \"discount\": {\r\n    \"value\": 10,\r\n    \"dueDateLimitDays\": 0\r\n  },\r\n  \"fine\": {\r\n    \"value\": 1\r\n  },\r\n  \"interest\": {\r\n    \"value\": 2\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/subscriptions",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"subscriptions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recuperar uma única assinatura",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/subscriptions/{{id_da_assinatura}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"subscriptions",
+								"{{id_da_assinatura}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar assinaturas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/subscriptions?customer=&billingType=&offset=&limit=&includeDeleted=&externalReference=",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"subscriptions"
+							],
+							"query": [
+								{
+									"key": "customer",
+									"value": ""
+								},
+								{
+									"key": "billingType",
+									"value": ""
+								},
+								{
+									"key": "offset",
+									"value": ""
+								},
+								{
+									"key": "limit",
+									"value": ""
+								},
+								{
+									"key": "includeDeleted",
+									"value": ""
+								},
+								{
+									"key": "externalReference",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar cobranças de uma assinatura",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/subscriptions/{{id_da_assinatura}}/payments",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"subscriptions",
+								"{{id_da_assinatura}}",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar assinatura com cartão de crédito",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"customer\": \"{CUSTOMER_ID}\",\r\n  \"billingType\": \"CREDIT_CARD\",\r\n  \"nextDueDate\": \"2017-05-15\",\r\n  \"value\": 19.9,\r\n  \"cycle\": \"MONTHLY\",\r\n  \"description\": \"Assinatura Plano Pró\",\r\n  \"creditCard\": {\r\n    \"holderName\": \"marcelo h almeida\",\r\n    \"number\": \"5162306219378829\",\r\n    \"expiryMonth\": \"05\",\r\n    \"expiryYear\": \"2021\",\r\n    \"ccv\": \"318\"\r\n  },\r\n  \"creditCardHolderInfo\": {\r\n    \"name\": \"Marcelo Henrique Almeida\",\r\n    \"email\": \"marcelo.almeida@gmail.com\",\r\n    \"cpfCnpj\": \"24971563792\",\r\n    \"postalCode\": \"89223-005\",\r\n    \"addressNumber\": \"277\",\r\n    \"addressComplement\": null,\r\n    \"phone\": \"4738010919\",\r\n    \"mobilePhone\": \"47998781877\"\r\n  },\r\n  \"creditCardToken\": \"a75a1d98-c52d-4a6b-a413-71e00b193c99\"\r\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/subscriptions",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"subscriptions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar assinatura existente",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"billingType\": \"BOLETO\",\r\n  \"nextDueDate\": \"2017-06-15\",\r\n  \"value\": 29.9,\r\n  \"cycle\": \"MONTHLY\",\r\n  \"description\": \"Assinatura Plano Pró\",\r\n  \"updatePendingPayments\": true,\r\n  \"discount\": {\r\n    \"value\": 10,\r\n    \"dueDateLimitDays\": 0\r\n  },\r\n  \"fine\": {\r\n    \"value\": 1\r\n  },\r\n  \"interest\": {\r\n    \"value\": 2\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/subscriptions/{{id_da_assinatura}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"subscriptions",
+								"{{id_da_assinatura}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover assinatura",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/subscriptions/{{id_da_assinatura}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"subscriptions",
+								"{{id_da_assinatura}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar notas fiscais de uma assinatura",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/subscriptions/{{id_da_assinatura}}/invoices?offset=&limit=&status=",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"subscriptions",
+								"{{id_da_assinatura}}",
+								"invoices"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": ""
+								},
+								{
+									"key": "limit",
+									"value": ""
+								},
+								{
+									"key": "status",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar configurações para emissão de notas fiscais",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"municipalServiceId\": null,\r\n  \"municipalServiceCode\": \"1.01\",\r\n  \"municipalServiceName\": \"Análise e desenvolvimento de sistemas\",\r\n  \"deductions\": 55,\r\n  \"taxes\": {\r\n    \"retainIss\": true,\r\n    \"iss\": 1,\r\n    \"cofins\": 1,\r\n    \"csll\": 1,\r\n    \"inss\": 1,\r\n    \"ir\": 1,\r\n    \"pis\": 1\r\n  },\r\n  \"effectiveDatePeriod\": \"ON_PAYMENT_CONFIRMATION\",\r\n  \"daysBeforeDueDate\": null,\r\n  \"receivedOnly\": null,\r\n  \"observations\": \"Referente aos trabalhos de Junho\"\r\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/subscriptions/{{id_da_assinatura}}/invoiceSettings",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"subscriptions",
+								"{{id_da_assinatura}}",
+								"invoiceSettings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar configuração para emissão de notas fiscais",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/subscriptions/{{id_da_assinatura}}/invoiceSettings",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"subscriptions",
+								"{{id_da_assinatura}}",
+								"invoiceSettings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recuperar configuração para emissão de notas fiscais",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/subscriptions/{{id_da_assinatura}}/invoiceSettings",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"subscriptions",
+								"{{id_da_assinatura}}",
+								"invoiceSettings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover configuração para emissão de notas fiscais",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/subscriptions/{{id_da_assinatura}}/invoiceSettings",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"subscriptions",
+								"{{id_da_assinatura}}",
+								"invoiceSettings"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Link de Pagamentos",
+			"item": [
+				{
+					"name": "Criar um link de pagamentos",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Venda de livros\",\r\n  \"description\": \"Qualquer livro por apenas R$: 50,00\",\r\n  \"endDate\": \"2021-02-05\",\r\n  \"value\": 50,\r\n  \"billingType\": \"UNDEFINED\",\r\n  \"chargeType\": \"DETACHED\",\r\n  \"dueDateLimitDays\": 10,\r\n  \"subscriptionCycle\": null,\r\n  \"maxInstallmentCount\": 1,\r\n  \"notificationEnabled\": true\r\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/paymentLinks",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"paymentLinks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar um link de pagamentos",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Venda de livros digitais\",\r\n  \"description\": \"Qualquer livro por apenas R$: 20,00\",\r\n  \"endDate\": \"2022-05-05\",\r\n  \"value\": 20,\r\n  \"active\": true,\r\n  \"billingType\": \"CREDIT_CARD\",\r\n  \"chargeType\": \"INSTALLMENT\",\r\n  \"dueDateLimitDays\": 0,\r\n  \"subscriptionCycle\": null,\r\n  \"maxInstallmentCount\": 5,\r\n  \"notificationEnabled\": false\r\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/paymentLinks/{{id_do_link_de_pagamento}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"paymentLinks",
+								"{{id_do_link_de_pagamento}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recuperar um único link de pagamentos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/paymentLinks/{{id_do_link_de_pagamento}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"paymentLinks",
+								"{{id_do_link_de_pagamento}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar link de pagamentos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/paymentLinks?active=&includeDeleted=&name=&offset=&limit=",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"paymentLinks"
+							],
+							"query": [
+								{
+									"key": "active",
+									"value": ""
+								},
+								{
+									"key": "includeDeleted",
+									"value": ""
+								},
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "offset",
+									"value": ""
+								},
+								{
+									"key": "limit",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover um link de pagamentos",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/paymentLinks/{{id_do_link_de_pagamento}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"paymentLinks",
+								"{{id_do_link_de_pagamento}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restaurar um link de pagamentos",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/paymentLinks/{{id_do_link_de_pagamento}}/restore",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"paymentLinks",
+								"{{id_do_link_de_pagamento}}",
+								"restore"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adicionar uma imagem a um link de pagamentos",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "main",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/paymentLinks/{{id_do_link_de_pagamento}}/images",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"paymentLinks",
+								"{{id_do_link_de_pagamento}}",
+								"images"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recuperar uma única imagem de um link de pagamentos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/paymentLinks/{{id_do_link_de_pagamento}}/images/{{id_da_imagem_do_link_de_pagamento}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"paymentLinks",
+								"{{id_do_link_de_pagamento}}",
+								"images",
+								"{{id_da_imagem_do_link_de_pagamento}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar imagens de um link de pagamentos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/paymentLinks/{{id_do_link_de_pagamento}}/images",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"paymentLinks",
+								"{{id_do_link_de_pagamento}}",
+								"images"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover uma imagem do link de pagamentos",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/paymentLinks/{{id_do_link_de_pagamento}}/images",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"paymentLinks",
+								"{{id_do_link_de_pagamento}}",
+								"images"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Definir imagem principal do link de pagamentos",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/paymentLinks/{{id_do_link_de_pagamento}}/images/{{id_da_imagem_do_link_de_pagamento}}/setAsMain",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"paymentLinks",
+								"{{id_do_link_de_pagamento}}",
+								"images",
+								"{{id_da_imagem_do_link_de_pagamento}}",
+								"setAsMain"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notificações",
+			"item": [
+				{
+					"name": "Atualizar notificação existente",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"enabled\": true,\r\n  \"emailEnabledForProvider\": true,\r\n  \"smsEnabledForProvider\": true,\r\n  \"emailEnabledForCustomer\": true,\r\n  \"smsEnabledForCustomer\": true,\r\n  \"phoneCallEnabledForCustomer\": false,\r\n  \"scheduleOffset\": 5\r\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/notifications/{{id_da_notificacao}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"notifications",
+								"{{id_da_notificacao}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transferências",
+			"item": [
+				{
+					"name": "Transferir para conta bancária",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"value\": 1000.00,\r\n        \"bankAccount\": {\r\n            \"bank\": {\r\n                \"code\": \"237\"\r\n            },\r\n            \"accountName\": \"Conta do Bradesco\",\r\n            \"ownerName\": \"Marcelo Almeida\",\r\n            \"ownerBirthDate\": \"1995-04-12\",\r\n            \"cpfCnpj\": \"52233424611\",\r\n            \"agency\": \"1263\",\r\n            \"account\": \"9999991\",\r\n            \"accountDigit\": \"1\",\r\n            \"bankAccountType\": \"CONTA_CORRENTE\",\r\n        }\r\n    }"
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/transfers",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"transfers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transferir para conta ASAAS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"value\": 1000,\r\n  \"walletId\": \"0021c712-d963-4d86-a59d-031e7ac51a2e\"\r\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/transfers",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"transfers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recuperar uma única transferência",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/transfers/{{id_da_transferencia}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"transfers",
+								"{{id_da_transferencia}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar transferências",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/transfers?dateCreated=&type=",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"transfers"
+							],
+							"query": [
+								{
+									"key": "dateCreated",
+									"value": ""
+								},
+								{
+									"key": "type",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Antecipações",
+			"item": [
+				{
+					"name": "Solicitar antecipação",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "agreementSignature",
+									"value": "João Felix",
+									"type": "text"
+								},
+								{
+									"key": "installment",
+									"value": "null",
+									"type": "text"
+								},
+								{
+									"key": "payment",
+									"value": "pay_626366773834",
+									"type": "text"
+								},
+								{
+									"key": "documents",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/anticipations",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"anticipations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Simular antecipação",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"installment\": null,\r\n  \"payment\": \"pay_626366773834\"\r\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/anticipations/simulate",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"anticipations",
+								"simulate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recuperar uma única antecipação",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/anticipations/{{id_da_antecipacao}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"anticipations",
+								"{{id_da_antecipacao}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar antecipações",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/anticipations?payment=&installment=&status=&offset=&limit=",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"anticipations"
+							],
+							"query": [
+								{
+									"key": "payment",
+									"value": ""
+								},
+								{
+									"key": "installment",
+									"value": ""
+								},
+								{
+									"key": "status",
+									"value": ""
+								},
+								{
+									"key": "offset",
+									"value": ""
+								},
+								{
+									"key": "limit",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Recuperações",
+			"item": [
+				{
+					"name": "Criar uma recuperação",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "payment",
+									"value": "pay_080225913252",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Duas mesas com 8 cadeiras solicitadas via encomenda no dia 01/05/2019",
+									"type": "text"
+								},
+								{
+									"key": "customerName",
+									"value": "Marcelo Almeida",
+									"type": "text"
+								},
+								{
+									"key": "customerCpfCnpj",
+									"value": "24971563792",
+									"type": "text"
+								},
+								{
+									"key": "customerPrimaryPhone",
+									"value": "4738010919",
+									"type": "text"
+								},
+								{
+									"key": "customerSecundaryPhone",
+									"value": "4732026941",
+									"type": "text"
+								},
+								{
+									"key": "customerPostalCode",
+									"value": "01310-000",
+									"type": "text"
+								},
+								{
+									"key": "customerAddress",
+									"value": "Av. Paulista",
+									"type": "text"
+								},
+								{
+									"key": "customerAddressNumber",
+									"value": "150",
+									"type": "text"
+								},
+								{
+									"key": "customerProvince",
+									"value": "Centro",
+									"type": "text"
+								},
+								{
+									"key": "customerComplement",
+									"value": "Sala 201",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "CREDIT_BUREAU",
+									"type": "text"
+								},
+								{
+									"key": "documents",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/paymentDunnings",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"paymentDunnings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Simular uma recuperação",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n  \"payment\": \"pay_080225913252\"\r\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/paymentDunnings/simulate",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"paymentDunnings",
+								"simulate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recuperar uma única recuperação",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/paymentDunnings/{{id_da_recuperacao}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"paymentDunnings",
+								"{{id_da_recuperacao}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar recuperações",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/paymentDunnings?status=&type=&payment=&requestStartDate=&requestEndDate=&offset=&limit=",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"paymentDunnings"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": ""
+								},
+								{
+									"key": "type",
+									"value": ""
+								},
+								{
+									"key": "payment",
+									"value": ""
+								},
+								{
+									"key": "requestStartDate",
+									"value": ""
+								},
+								{
+									"key": "requestEndDate",
+									"value": ""
+								},
+								{
+									"key": "offset",
+									"value": ""
+								},
+								{
+									"key": "limit",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar histórico de eventos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/paymentDunnings/{{id_da_recuperacao}}/history?offset=&limit=",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"paymentDunnings",
+								"{{id_da_recuperacao}}",
+								"history"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": ""
+								},
+								{
+									"key": "limit",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar pagamentos recebidos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/paymentDunnings/{{id_da_recuperacao}}/partialPayments?offset=&limit=",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"paymentDunnings",
+								"{{id_da_recuperacao}}",
+								"partialPayments"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": ""
+								},
+								{
+									"key": "limit",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar cobranças disponíveis para recuperação",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/paymentDunnings/paymentsAvailableForDunning?offset=&limit=",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"paymentDunnings",
+								"paymentsAvailableForDunning"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": ""
+								},
+								{
+									"key": "limit",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reenviar documentos",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "documents",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/paymentDunnings/{{id_da_recuperacao}}/documents",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"paymentDunnings",
+								"{{id_da_recuperacao}}",
+								"documents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancelar recuperação",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/paymentDunnings/{{id_da_recuperacao}}/cancel",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"paymentDunnings",
+								"{{id_da_recuperacao}}",
+								"cancel"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pagamento de contas",
+			"item": [
+				{
+					"name": "Criar um pagamento de conta",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"identificationField\": \"03399.77779 29900.000000 04751.101017 1 81510000002990\",\r\n  \"scheduleDate\": \"2020-03-15\",\r\n  \"description\": \"Celular 03/12\",\r\n  \"discount\": 2,\r\n  \"dueDate\": \"2020-03-30\",\r\n  \"value\": 98\r\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/bill",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"bill"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Simular um pagamento de conta",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"identificationField\": \"03399.77779 29900.000000 04751.101017 1 81510000002990\",\r\n  \"barCode\": \"34197830200000050001090000010231248018531000\"\r\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/bill/simulate",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"bill",
+								"simulate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recuperar um único pagamento de conta",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/bill/{{id_do_pagamento_de_conta}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"bill",
+								"{{id_do_pagamento_de_conta}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar pagamentos de conta",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/bill?offset=&limit=",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"bill"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": ""
+								},
+								{
+									"key": "limit",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancelar pagamento de conta",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/bill/{{id_do_pagamento_de_conta}}/cancel",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"bill",
+								"{{id_do_pagamento_de_conta}}",
+								"cancel"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Consulta SERASA",
+			"item": [
+				{
+					"name": "Realizar consulta",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"customer\": \"cus_000000002750\",\r\n  \"cpfCnpj\": null,\r\n  \"state\": \"SC\"\r\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/creditBureauReport",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"creditBureauReport"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recuperar uma consulta",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/creditBureauReport/{{id_da_consulta_serasa}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"creditBureauReport",
+								"{{id_da_consulta_serasa}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar consultas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/creditBureauReport?startDate=&endDate=&offset=&limit=",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"creditBureauReport"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": ""
+								},
+								{
+									"key": "endDate",
+									"value": ""
+								},
+								{
+									"key": "offset",
+									"value": ""
+								},
+								{
+									"key": "limit",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Extrato",
+			"item": [
+				{
+					"name": "Recuperar extrato",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/financialTransactions?startDate=&finishDate=&limit=&offset=",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"financialTransactions"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": ""
+								},
+								{
+									"key": "finishDate",
+									"value": ""
+								},
+								{
+									"key": "limit",
+									"value": ""
+								},
+								{
+									"key": "offset",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Informações e personalização da conta",
+			"item": [
+				{
+					"name": "Recuperar dados comerciais",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/myAccount/",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"myAccount",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Salvar personalização da fatura",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "logoBackgroundColor",
+									"value": "#ff0000",
+									"type": "text"
+								},
+								{
+									"key": "infoBackgroundColor",
+									"value": "#000000",
+									"type": "text"
+								},
+								{
+									"key": "fontColor",
+									"value": "#00ff00",
+									"type": "text"
+								},
+								{
+									"key": "enabled",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "logoFile",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/myAccount/paymentCheckoutConfig/",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"myAccount",
+								"paymentCheckoutConfig",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recuperar configurações de personalização",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/myAccount/paymentCheckoutConfig/",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"myAccount",
+								"paymentCheckoutConfig",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notas fiscais",
+			"item": [
+				{
+					"name": "Agendar nota fiscal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"payment\": \"pay_637959110194\",\r\n  \"installment\": null,\r\n  \"serviceDescription\": \"Nota fiscal da Fatura 101940. \\nDescrição dos Serviços: ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\",\r\n  \"observations\": \"Mensal referente aos trabalhos de Junho.\",\r\n  \"value\": 300,\r\n  \"deductions\": 0,\r\n  \"effectiveDate\": \"2018-07-03\",\r\n  \"externalReference\": null,\r\n  \"taxes\": {\r\n    \"retainIss\": false,\r\n    \"iss\": 3,\r\n    \"cofins\": 3,\r\n    \"csll\": 1,\r\n    \"inss\": 0,\r\n    \"ir\": 1.5,\r\n    \"pis\": 0.65\r\n  },\r\n  \"municipalServiceId\": null,\r\n  \"municipalServiceCode\": \"1.01\",\r\n  \"municipalServiceName\": \"Análise e desenvolvimento de sistemas\"\r\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/invoices",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"invoices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar nota fiscal",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"serviceDescription\": \"Nota fiscal da Fatura 101940. \\nDescrição dos Serviços: ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\",\r\n  \"observations\": \"Mensal referente aos trabalhos de Junho.\",\r\n  \"value\": 300,\r\n  \"deductions\": 10,\r\n  \"effectiveDate\": \"2018-07-03\",\r\n  \"externalReference\": null,\r\n  \"taxes\": {\r\n    \"retainIss\": false,\r\n    \"iss\": 3,\r\n    \"cofins\": 3,\r\n    \"csll\": 1,\r\n    \"inss\": 0,\r\n    \"ir\": 1.5,\r\n    \"pis\": 0.65\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/invoices/{{id_da_nota_fiscal}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"invoices",
+								"{{id_da_nota_fiscal}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recuperar uma nota fiscal",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/invoices/{{id_da_nota_fiscal}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"invoices",
+								"{{id_da_nota_fiscal}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar notas fiscais",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/invoices?effectiveDate%5Bge%5D=&effectiveDate%5Ble%5D=&payment=&installment=&status=&offset=&limit=",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"invoices"
+							],
+							"query": [
+								{
+									"key": "effectiveDate%5Bge%5D",
+									"value": ""
+								},
+								{
+									"key": "effectiveDate%5Ble%5D",
+									"value": ""
+								},
+								{
+									"key": "payment",
+									"value": ""
+								},
+								{
+									"key": "installment",
+									"value": ""
+								},
+								{
+									"key": "status",
+									"value": ""
+								},
+								{
+									"key": "offset",
+									"value": ""
+								},
+								{
+									"key": "limit",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Emitir uma nota fiscal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/invoices/{{id_da_nota_fiscal}}/authorize",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"invoices",
+								"{{id_da_nota_fiscal}}",
+								"authorize"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancelar uma nota fiscal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/invoices/{{id_da_nota_fiscal}}/cancel",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"invoices",
+								"{{id_da_nota_fiscal}}",
+								"cancel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar serviços municipais",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/invoices/municipalServices?description=",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"invoices",
+								"municipalServices"
+							],
+							"query": [
+								{
+									"key": "description",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Informações fiscais",
+			"item": [
+				{
+					"name": "Listar configurações municipais",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/customerFiscalInfo/municipalOptions",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"customerFiscalInfo",
+								"municipalOptions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar e atualizar informações fiscais",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "marcelo.almeida@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "municipalInscription",
+									"value": "21779501",
+									"type": "text"
+								},
+								{
+									"key": "stateInscription",
+									"value": "null",
+									"type": "text"
+								},
+								{
+									"key": "simplesNacional",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "culturalProjectsPromoter",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "cnae",
+									"value": "6209100",
+									"type": "text"
+								},
+								{
+									"key": "specialTaxRegime",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "serviceListItem",
+									"value": "null",
+									"type": "text"
+								},
+								{
+									"key": "rpsSerie",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "rpsNumber",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "loteNumber",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "usuario",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "secret",
+									"type": "text"
+								},
+								{
+									"key": "accessToken",
+									"value": "abcde12345",
+									"type": "text"
+								},
+								{
+									"key": "certificateFile",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "certificatePassword",
+									"value": "secret",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/customerFiscalInfo",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"customerFiscalInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recuperar informações fiscais",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/customerFiscalInfo",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"customerFiscalInfo"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Configurações de Webhook",
+			"item": [
+				{
+					"name": "Webhook de Cobrança",
+					"item": [
+						{
+							"name": "Criar ou atualizar configurações para Webhook",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"url\": \"https://www.exemplo.com/webhook/asaas\",\r\n  \"email\": \"marcelo.almeida@gmail.com\",\r\n  \"interrupted\": false,\r\n  \"enabled\": true,\r\n  \"apiVersion\": 3,\r\n  \"authToken\": \"5tLxsL6uoN\"\r\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/api/v3/webhook",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"v3",
+										"webhook"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Recuperar configurações de webhook",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}/api/v3/webhook",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"v3",
+										"webhook"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Webhook de Notas Fiscais",
+					"item": [
+						{
+							"name": "Criar ou atualizar configurações para webhook",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"url\": \"https://www.exemplo.com/webhook/asaas\",\r\n  \"email\": \"marcelo.almeida@gmail.com\",\r\n  \"interrupted\": false,\r\n  \"enabled\": true,\r\n  \"apiVersion\": 3,\r\n  \"authToken\": \"5tLxsL6uoN\"\r\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/api/v3/webhook/invoice",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"v3",
+										"webhook",
+										"invoice"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Recuperar configuração de webhook",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}/api/v3/webhook/invoice",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"v3",
+										"webhook",
+										"invoice"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Contas Asaas",
+			"item": [
+				{
+					"name": "Criar conta",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Conta criada via API\",\r\n    \"email\": \"emaildaempresa@gmail.com\",\r\n    \"cpfCnpj\": \"66625514000140\",\r\n    \"companyType\": \"MEI\",\r\n    \"phone\": \"11 32300606\",\r\n    \"mobilePhone\": \"11 988451155\",\r\n    \"address\": \"Av. Rolf Wiest\",\r\n    \"addressNumber\": \"277\",\r\n    \"complement\": \"Sala 502\",\r\n    \"province\": \"Bom Retiro\",\r\n    \"postalCode\": \"89223005\",\r\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/accounts",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar contas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/accounts?limit=&offset=",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"accounts"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": ""
+								},
+								{
+									"key": "offset",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "{{sua_chave_api}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "access_token",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id_do_cliente",
+			"value": ""
+		},
+		{
+			"key": "id_da_cobranca",
+			"value": ""
+		},
+		{
+			"key": "id_da_parcela",
+			"value": ""
+		},
+		{
+			"key": "id_da_assinatura",
+			"value": ""
+		},
+		{
+			"key": "id_do_link_de_pagamento",
+			"value": ""
+		},
+		{
+			"key": "id_da_imagem_do_link_de_pagamento",
+			"value": ""
+		},
+		{
+			"key": "id_da_notificacao",
+			"value": ""
+		},
+		{
+			"key": "id_da_transferencia",
+			"value": ""
+		},
+		{
+			"key": "id_da_antecipacao",
+			"value": ""
+		},
+		{
+			"key": "id_da_recuperacao",
+			"value": ""
+		},
+		{
+			"key": "id_do_pagamento_de_conta",
+			"value": ""
+		},
+		{
+			"key": "id_da_consulta_serasa",
+			"value": ""
+		},
+		{
+			"key": "id_da_nota_fiscal",
+			"value": ""
+		}
+	]
+}
