@@ -2,7 +2,7 @@ name: Deploy Postman Collection
 
 on:
   push:
-    branches: [main, release]
+    branches: [main]
 
 jobs:
   build:
