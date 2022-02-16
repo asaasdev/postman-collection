@@ -22,5 +22,8 @@ jobs:
       - name: Install npm 8.3.0
         run: npm install -g npm@8.3.0
 
+      - name: Npm Install
+        run: npm i
+
       - name: Build
         run: node deployPostmanCollection.js
