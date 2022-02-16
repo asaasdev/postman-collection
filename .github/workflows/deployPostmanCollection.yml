@@ -1,0 +1,26 @@
+name: Deploy Postman Collection
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Use Node.js v14.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+          cache: 'npm'
+
+      - name: Install npm 8.3.0
+        run: npm install -g npm@8.3.0
+
+      - name: Build
+        run: node deployPostmanCollection.js
