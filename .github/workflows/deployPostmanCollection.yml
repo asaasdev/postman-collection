@@ -25,5 +25,7 @@ jobs:
       - name: Npm Install
         run: npm ci
 
-      - name: Build
+      - name: Deploy Postman collection
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
         run: node deployPostmanCollection.js
