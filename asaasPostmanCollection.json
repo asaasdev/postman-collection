@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "34183c23-2b1e-4cf1-a3c5-db62dae4dd69",
+		"_postman_id": "0d62575e-f3b9-4efd-9702-84c85656fec3",
 		"name": "API ASAAS v3",
 		"description": "Nós aqui do Asaas adoramos poupar tempo de todo mundo, por isso fizemos essa collection com todas as nossas APIs. 👍\n\n# Documentação\n\n  \nA documentação completa pode ser acessada [neste link.](https://asaasv3.docs.apiary.io/)\n\nAmbientes disponíveis:\n\n*   Local\n*   Sandbox\n*   Produção\n    \n\nNão esquece de consultar as variáveis da coleção.\n\n## Autenticação\n\nPara testar os exemplos aqui descritos é necessário ter uma conta no Asaas. Caso você ainda não tenha, basta [criar uma conta clicando aqui](https://www.asaas.com/onboarding/createAccount?utm_source=postman) ou [aqui para criar em nossa sandbox](https://sandbox.asaas.com/onboarding/createAccount).\n\nA autenticação é feita através do fornecimento da sua API Key. Ela deve ser transmitida em todas as requisições no header \\`access_token\\`. Caso a API Key seja inválida ou não seja informada, o Asaas retornará `HTTP 401`.  \nAs API Keys são distintas entre os ambientes de Sandbox e Produção, portanto lembre-se de alterá-la quando mudar a URL.  \nPara obter sua API Key [acesse a Aba Integração na área Minha Conta](https://www.asaas.com/config/index?tab=pushNotification).  \nNa collection sua API Key pode ser informada na área de ambientes.\n\n> ***Atenção***:  \n> Sua API Key carrega muitos privilégios, portanto certifique-se de mantê-la protegida. Não informe ela em atendimentos e nem a exponha no front-end da sua aplicação. Além disso, não é possível recuperá-la caso perdida, sendo necessário a geração de uma nova.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -1817,10 +1817,10 @@
 			]
 		},
 		{
-			"name": "Recuperações",
+			"name": "Negativações",
 			"item": [
 				{
-					"name": "Criar uma recuperação",
+					"name": "Criar uma negativação",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -1915,7 +1915,7 @@
 					"response": []
 				},
 				{
-					"name": "Simular uma recuperação",
+					"name": "Simular uma negativação",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -1945,7 +1945,7 @@
 					"response": []
 				},
 				{
-					"name": "Recuperar uma única recuperação",
+					"name": "Recuperar uma única negativação",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -1971,7 +1971,7 @@
 					"response": []
 				},
 				{
-					"name": "Listar recuperações",
+					"name": "Listar negativações",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -2100,7 +2100,7 @@
 					"response": []
 				},
 				{
-					"name": "Listar cobranças disponíveis para recuperação",
+					"name": "Listar cobranças disponíveis para negativação",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -2173,7 +2173,7 @@
 					"response": []
 				},
 				{
-					"name": "Cancelar recuperação",
+					"name": "Cancelar negativação",
 					"request": {
 						"method": "POST",
 						"header": [
