@@ -3017,6 +3017,97 @@
 			]
 		},
 		{
+			"name": "Pix",
+			"item": [
+				{
+					"name": "Recuperar uma única transação",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/api/v3/pix/transactions?id=",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"pix",
+								"transactions"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar transações",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/api/v3/pix/transactions?offset=&limit=&status=&type=",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"pix",
+								"transactions"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": ""
+								},
+								{
+									"key": "limit",
+									"value": ""
+								},
+								{
+									"key": "status",
+									"value": ""
+								},
+								{
+									"key": "type",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancelar uma transação agendada",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/api/v3/pix/transactions/{{id_da_transacao_pix}}/cancel",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"pix",
+								"transactions",
+								"{{id_da_transacao_pix}}",
+								"cancel"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Configurações de Webhook",
 			"item": [
 				{
@@ -3297,6 +3388,10 @@
 		},
 		{
 			"key": "id_da_nota_fiscal",
+			"value": ""
+		},
+		{
+			"key": "id_da_transacao_pix",
 			"value": ""
 		}
 	]
