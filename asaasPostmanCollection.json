@@ -3105,98 +3105,98 @@
 					},
 					"response": []
 				},
-                {
-                    "name": "Criar um QRCode estático",
-                    "request": {
-                        "method": "POST",
-                        "header": [],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\n    \"addressKey\": \"marcelo.almeida@gmail.com\",\n    \"description\": \"Churrasco\",\n    \"value\": 50.00\n}",
-                            "options": {
-                                "raw": {
-                                    "language": "json"
-                                }
-                            }
-                        },
-                        "url": {
-                            "raw": "{{domain}}/api/v3/pix/qrCodes/static",
-                            "host": [
-                                "{{domain}}"
-                            ],
-                            "path": [
-                                "api",
-                                "v3",
-                                "pix",
-                                "qrCodes",
-                                "static"
-                            ]
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Decodificar um QRCode",
-                    "request": {
-                        "method": "POST",
-                        "header": [],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\n    \"payload\": \"00020126360014br.gov.bcb.pix0114+554799878454552040000530398654040.005802BR5905ASAAS6009São Paulo61088922730162290525ASAAS-1-2SHTS88FSECYMCUQX6304CA10\"\n}",
-                            "options": {
-                                "raw": {
-                                    "language": "json"
-                                }
-                            }
-                        },
-                        "url": {
-                            "raw": "{{domain}}/api/v3/pix/qrCodes/decode",
-                            "host": [
-                                "{{domain}}"
-                            ],
-                            "path": [
-                                "api",
-                                "v3",
-                                "pix",
-                                "qrCodes",
-                                "decode"
-                            ]
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Pagar um QRCode",
-                    "request": {
-                        "method": "POST",
-                        "header": [],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\n    \"qrCode\": {\n        \"payload\": \"00020126360014br.gov.bcb.pix0114+554799878454552040000530398654040.005802BR5905ASAAS6009São Paulo61088922730162290525ASAAS-1-2SHTS88FSECYMCUQX6304CA10\"\n    },\n    \"value\": 100.00,\n    \"description\": \"Suco de laranja\",\n    \"scheduleDate\": \"2022-03-15 00:00:00\"\n}",
-                            "options": {
-                                "raw": {
-                                    "language": "json"
-                                }
-                            }
-                        },
-                        "url": {
-                            "raw": "{{domain}}/api/v3/pix/qrCodes/pay",
-                            "host": [
-                                "{{domain}}"
-                            ],
-                            "path": [
-                                "api",
-                                "v3",
-                                "pix",
-                                "qrCodes",
-                                "pay"
-                            ]
-                        }
-                    },
-                    "response": []
-                }
-            ]
-        },
+				{
+					"name": "Criar um QRCode estático",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"addressKey\": \"marcelo.almeida@gmail.com\",\n    \"description\": \"Churrasco\",\n    \"value\": 50.00\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/pix/qrCodes/static",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"pix",
+								"qrCodes",
+								"static"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Decodificar um QRCode",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"payload\": \"00020126360014br.gov.bcb.pix0114+554799878454552040000530398654040.005802BR5905ASAAS6009São Paulo61088922730162290525ASAAS-1-2SHTS88FSECYMCUQX6304CA10\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/pix/qrCodes/decode",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"pix",
+								"qrCodes",
+								"decode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pagar um QRCode",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"qrCode\": {\n        \"payload\": \"00020126360014br.gov.bcb.pix0114+554799878454552040000530398654040.005802BR5905ASAAS6009São Paulo61088922730162290525ASAAS-1-2SHTS88FSECYMCUQX6304CA10\"\n    },\n    \"value\": 100.00,\n    \"description\": \"Suco de laranja\",\n    \"scheduleDate\": \"2022-03-15 00:00:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/pix/qrCodes/pay",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"pix",
+								"qrCodes",
+								"pay"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
 		{
 			"name": "Configurações de Webhook",
 			"item": [
