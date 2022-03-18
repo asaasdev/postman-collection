@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "7098937c-c0e0-4c0f-9c0d-158862bc7920",
+		"_postman_id": "f649c187-f9cd-439d-987b-4678ac4f76b6",
 		"name": "API ASAAS v3",
 		"description": "Nós aqui do Asaas adoramos poupar tempo de todo mundo, por isso fizemos essa collection com todas as nossas APIs. 👍\n\n# Documentação\n\n  \nA documentação completa pode ser acessada [neste link.](https://asaasv3.docs.apiary.io/)\n\nAmbientes disponíveis:\n\n*   Local\n*   Sandbox\n*   Produção\n    \n\nNão esquece de consultar as variáveis da coleção.\n\n## Autenticação\n\nPara testar os exemplos aqui descritos é necessário ter uma conta no Asaas. Caso você ainda não tenha, basta [criar uma conta clicando aqui](https://www.asaas.com/onboarding/createAccount?utm_source=postman) ou [aqui para criar em nossa sandbox](https://sandbox.asaas.com/onboarding/createAccount).\n\nA autenticação é feita através do fornecimento da sua API Key. Ela deve ser transmitida em todas as requisições no header \\`access_token\\`. Caso a API Key seja inválida ou não seja informada, o Asaas retornará `HTTP 401`.  \nAs API Keys são distintas entre os ambientes de Sandbox e Produção, portanto lembre-se de alterá-la quando mudar a URL.  \nPara obter sua API Key [acesse a Aba Integração na área Minha Conta](https://www.asaas.com/config/index?tab=pushNotification).  \nNa collection sua API Key pode ser informada na área de ambientes.\n\n> ***Atenção***:  \n> Sua API Key carrega muitos privilégios, portanto certifique-se de mantê-la protegida. Não informe ela em atendimentos e nem a exponha no front-end da sua aplicação. Além disso, não é possível recuperá-la caso perdida, sendo necessário a geração de uma nova.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -2505,6 +2505,94 @@
 			]
 		},
 		{
+			"name": "Informações financeiras",
+			"item": [
+				{
+					"name": "Recuperar saldo da conta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/api/v3/finance/balance",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"finance",
+								"balance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Estatísticas de cobranças",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/api/v3/finance/payment/statistics",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"finance",
+								"payment",
+								"statistics"
+							],
+							"query": [
+								{
+									"key": "customer",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "billingType",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "anticipated",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "dueDate[ge]",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "dueDate[le]",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "dateCreated[ge]",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "dateCreated[le]",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Informações e personalização da conta",
 			"item": [
 				{
@@ -3383,94 +3471,6 @@
 								{
 									"key": "offset",
 									"value": ""
-								}
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Informações financeiras",
-			"item": [
-				{
-					"name": "Recuperar saldo da conta",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{domain}}/api/v3/finance/balance",
-							"host": [
-								"{{domain}}"
-							],
-							"path": [
-								"api",
-								"v3",
-								"finance",
-								"balance"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Estatísticas de cobranças",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{domain}}/api/v3/finance/payment/statistics",
-							"host": [
-								"{{domain}}"
-							],
-							"path": [
-								"api",
-								"v3",
-								"finance",
-								"payment",
-								"statistics"
-							],
-							"query": [
-								{
-									"key": "customer",
-									"value": null,
-									"disabled": true
-								},
-								{
-									"key": "billingType",
-									"value": null,
-									"disabled": true
-								},
-								{
-									"key": "status",
-									"value": null,
-									"disabled": true
-								},
-								{
-									"key": "anticipated",
-									"value": null,
-									"disabled": true
-								},
-								{
-									"key": "dueDate[ge]",
-									"value": null,
-									"disabled": true
-								},
-								{
-									"key": "dueDate[le]",
-									"value": null,
-									"disabled": true
-								},
-								{
-									"key": "dateCreated[ge]",
-									"value": null,
-									"disabled": true
-								},
-								{
-									"key": "dateCreated[le]",
-									"value": null,
-									"disabled": true
 								}
 							]
 						}
