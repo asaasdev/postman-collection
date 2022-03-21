@@ -3377,6 +3377,22 @@
 							],
 							"query": [
 								{
+									"key": "cpfCnpj",
+									"value": ""
+								},
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "email",
+									"value": ""
+								},
+								{
+									"key": "walletId",
+									"value": ""
+								},
+								{
 									"key": "limit",
 									"value": ""
 								},
