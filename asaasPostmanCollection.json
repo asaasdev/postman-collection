@@ -3366,7 +3366,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/accounts?limit=&offset=",
+							"raw": "{{domain}}/api/v3/accounts?cpfCnpj=&name=&email=&walletId=&limit=&offset=",
 							"host": [
 								"{{domain}}"
 							],
