@@ -536,7 +536,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"value\": 5,\n    \"reason\": \"REQUESTED_BY_PAYER\"\n}"
+							"raw": "{\n    \"value\": 5,\n    \"description\": \"Valor a mais\"\n}"
 						},
 						"url": {
 							"raw": "{{domain}}/api/v3/payments/{{id_da_cobranca}}/refund",
