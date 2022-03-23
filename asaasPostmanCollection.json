@@ -534,6 +534,10 @@
 								"type": "text"
 							}
 						],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"value\": 5,\n    \"reason\": \"REQUESTED_BY_PAYER\"\n}"
+                        },
 						"url": {
 							"raw": "{{domain}}/api/v3/payments/{{id_da_cobranca}}/refund",
 							"host": [
