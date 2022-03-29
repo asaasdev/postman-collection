@@ -3545,7 +3545,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/accounts?limit=&offset=",
+							"raw": "{{domain}}/api/v3/accounts?cpfCnpj=&name=&email=&walletId=&limit=&offset=",
 							"host": [
 								"{{domain}}"
 							],
@@ -3555,6 +3555,22 @@
 								"accounts"
 							],
 							"query": [
+								{
+									"key": "cpfCnpj",
+									"value": ""
+								},
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "email",
+									"value": ""
+								},
+								{
+									"key": "walletId",
+									"value": ""
+								},
 								{
 									"key": "limit",
 									"value": ""
