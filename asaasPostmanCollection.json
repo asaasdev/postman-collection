@@ -3282,6 +3282,97 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Criar uma chave",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"EVP\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/pix/addressKeys",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"pix",
+								"addressKeys"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar chaves",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/api/v3/pix/addressKeys",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"pix",
+								"addressKeys"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recuperar uma única chave",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/api/v3/pix/addressKeys/{{id_da_chave_pix}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"pix",
+								"addressKeys",
+								"{{id_da_chave_pix}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover chave",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/api/v3/pix/addressKeys/{{id_da_chave_pix}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"pix",
+								"addressKeys",
+								"{{id_da_chave_pix}}"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
