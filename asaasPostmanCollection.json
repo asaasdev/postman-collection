@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "3aaeaf32-41a0-4266-a293-b85a2e8a6329",
+		"_postman_id": "3aaeaf32-41a0-4266-a293-b85a2e8a6329"
 		"name": "API ASAAS v3",
 		"description": "Nós aqui do Asaas adoramos poupar tempo de todo mundo, por isso fizemos essa collection com todas as nossas APIs. 👍\n\n# Documentação\n\n  \nA documentação completa pode ser acessada [neste link.](https://asaasv3.docs.apiary.io/)\n\nAmbientes disponíveis:\n\n*   Local\n*   Sandbox\n*   Produção\n    \n\nNão esquece de consultar as variáveis da coleção.\n\n## Autenticação\n\nPara testar os exemplos aqui descritos é necessário ter uma conta no Asaas. Caso você ainda não tenha, basta [criar uma conta clicando aqui](https://www.asaas.com/onboarding/createAccount?utm_source=postman) ou [aqui para criar em nossa sandbox](https://sandbox.asaas.com/onboarding/createAccount).\n\nA autenticação é feita através do fornecimento da sua API Key. Ela deve ser transmitida em todas as requisições no header \\`access_token\\`. Caso a API Key seja inválida ou não seja informada, o Asaas retornará `HTTP 401`.  \nAs API Keys são distintas entre os ambientes de Sandbox e Produção, portanto lembre-se de alterá-la quando mudar a URL.  \nPara obter sua API Key [acesse a Aba Integração na área Minha Conta](https://www.asaas.com/config/index?tab=pushNotification).  \nNa collection sua API Key pode ser informada na área de ambientes.\n\n> ***Atenção***:  \n> Sua API Key carrega muitos privilégios, portanto certifique-se de mantê-la protegida. Não informe ela em atendimentos e nem a exponha no front-end da sua aplicação. Além disso, não é possível recuperá-la caso perdida, sendo necessário a geração de uma nova.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -369,7 +369,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/payments?customer=&billingType=&status=&subscription=&installment=&externalReference=&paymentDate=&anticipated=&paymentDate%5Bge%5D=&paymentDate%5Ble%5D=&dueDate%5Bge%5D=&dueDate%5Ble%5D=&offset=&limit=",
+							"raw": "{{domain}}/api/v3/payments",
 							"host": [
 								"{{domain}}"
 							],
@@ -381,59 +381,73 @@
 							"query": [
 								{
 									"key": "customer",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "billingType",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "status",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "subscription",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "installment",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "externalReference",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "paymentDate",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "anticipated",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "paymentDate%5Bge%5D",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "paymentDate%5Ble%5D",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "dueDate%5Bge%5D",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "dueDate%5Ble%5D",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "offset",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "limit",
-									"value": ""
+									"value": "",
+									"disabled": true
 								}
 							]
 						}
@@ -706,7 +720,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/installments?offset=&limit=",
+							"raw": "{{domain}}/api/v3/installments",
 							"host": [
 								"{{domain}}"
 							],
@@ -718,11 +732,13 @@
 							"query": [
 								{
 									"key": "offset",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "limit",
-									"value": ""
+									"value": "",
+									"disabled": true
 								}
 							]
 						}
@@ -854,7 +870,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/subscriptions?customer=&billingType=&offset=&limit=&includeDeleted=&externalReference=",
+							"raw": "{{domain}}/api/v3/subscriptions",
 							"host": [
 								"{{domain}}"
 							],
@@ -866,27 +882,33 @@
 							"query": [
 								{
 									"key": "customer",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "billingType",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "offset",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "limit",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "includeDeleted",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "externalReference",
-									"value": ""
+									"value": "",
+									"disabled": true
 								}
 							]
 						}
@@ -1017,7 +1039,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/subscriptions/{{id_da_assinatura}}/invoices?offset=&limit=&status=",
+							"raw": "{{domain}}/api/v3/subscriptions/{{id_da_assinatura}}/invoices",
 							"host": [
 								"{{domain}}"
 							],
@@ -1031,15 +1053,18 @@
 							"query": [
 								{
 									"key": "offset",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "limit",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "status",
-									"value": ""
+									"value": "",
+									"disabled": true
 								}
 							]
 						}
@@ -1260,7 +1285,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/paymentLinks?active=&includeDeleted=&name=&offset=&limit=",
+							"raw": "{{domain}}/api/v3/paymentLinks",
 							"host": [
 								"{{domain}}"
 							],
@@ -1272,23 +1297,28 @@
 							"query": [
 								{
 									"key": "active",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "includeDeleted",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "name",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "offset",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "limit",
-									"value": ""
+									"value": "",
+									"disabled": true
 								}
 							]
 						}
@@ -1724,7 +1754,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/transfers?dateCreated=&type=",
+							"raw": "{{domain}}/api/v3/transfers",
 							"host": [
 								"{{domain}}"
 							],
@@ -1736,11 +1766,13 @@
 							"query": [
 								{
 									"key": "dateCreated",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "type",
-									"value": ""
+									"value": "",
+									"disabled": true
 								}
 							]
 						}
@@ -1870,7 +1902,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/anticipations?payment=&installment=&status=&offset=&limit=",
+							"raw": "{{domain}}/api/v3/anticipations",
 							"host": [
 								"{{domain}}"
 							],
@@ -1882,23 +1914,28 @@
 							"query": [
 								{
 									"key": "payment",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "installment",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "status",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "offset",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "limit",
-									"value": ""
+									"value": "",
+									"disabled": true
 								}
 							]
 						}
@@ -2073,7 +2110,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/paymentDunnings?status=&type=&payment=&requestStartDate=&requestEndDate=&offset=&limit=",
+							"raw": "{{domain}}/api/v3/paymentDunnings",
 							"host": [
 								"{{domain}}"
 							],
@@ -2085,31 +2122,38 @@
 							"query": [
 								{
 									"key": "status",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "type",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "payment",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "requestStartDate",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "requestEndDate",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "offset",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "limit",
-									"value": ""
+									"value": "",
+									"disabled": true
 								}
 							]
 						}
@@ -2128,7 +2172,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/paymentDunnings/{{id_da_recuperacao}}/history?offset=&limit=",
+							"raw": "{{domain}}/api/v3/paymentDunnings/{{id_da_recuperacao}}/history",
 							"host": [
 								"{{domain}}"
 							],
@@ -2142,11 +2186,13 @@
 							"query": [
 								{
 									"key": "offset",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "limit",
-									"value": ""
+									"value": "",
+									"disabled": true
 								}
 							]
 						}
@@ -2165,7 +2211,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/paymentDunnings/{{id_da_recuperacao}}/partialPayments?offset=&limit=",
+							"raw": "{{domain}}/api/v3/paymentDunnings/{{id_da_recuperacao}}/partialPayments",
 							"host": [
 								"{{domain}}"
 							],
@@ -2179,11 +2225,13 @@
 							"query": [
 								{
 									"key": "offset",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "limit",
-									"value": ""
+									"value": "",
+									"disabled": true
 								}
 							]
 						}
@@ -2202,7 +2250,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/paymentDunnings/paymentsAvailableForDunning?offset=&limit=",
+							"raw": "{{domain}}/api/v3/paymentDunnings/paymentsAvailableForDunning",
 							"host": [
 								"{{domain}}"
 							],
@@ -2215,11 +2263,13 @@
 							"query": [
 								{
 									"key": "offset",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "limit",
-									"value": ""
+									"value": "",
+									"disabled": true
 								}
 							]
 						}
@@ -2392,7 +2442,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/bill?offset=&limit=",
+							"raw": "{{domain}}/api/v3/bill",
 							"host": [
 								"{{domain}}"
 							],
@@ -2404,11 +2454,13 @@
 							"query": [
 								{
 									"key": "offset",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "limit",
-									"value": ""
+									"value": "",
+									"disabled": true
 								}
 							]
 						}
@@ -2514,7 +2566,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/creditBureauReport?startDate=&endDate=&offset=&limit=",
+							"raw": "{{domain}}/api/v3/creditBureauReport",
 							"host": [
 								"{{domain}}"
 							],
@@ -2526,19 +2578,23 @@
 							"query": [
 								{
 									"key": "startDate",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "endDate",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "offset",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "limit",
-									"value": ""
+									"value": "",
+									"disabled": true
 								}
 							]
 						}
@@ -2562,7 +2618,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/financialTransactions?startDate=&finishDate=&limit=&offset=",
+							"raw": "{{domain}}/api/v3/financialTransactions",
 							"host": [
 								"{{domain}}"
 							],
@@ -2574,19 +2630,23 @@
 							"query": [
 								{
 									"key": "startDate",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "finishDate",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "limit",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "offset",
-									"value": ""
+									"value": "",
+									"disabled": true
 								}
 							]
 						}
@@ -2919,7 +2979,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/invoices?effectiveDate%5Bge%5D=&effectiveDate%5Ble%5D=&payment=&installment=&status=&offset=&limit=",
+							"raw": "{{domain}}/api/v3/invoices",
 							"host": [
 								"{{domain}}"
 							],
@@ -2931,31 +2991,38 @@
 							"query": [
 								{
 									"key": "effectiveDate%5Bge%5D",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "effectiveDate%5Ble%5D",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "payment",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "installment",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "status",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "offset",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "limit",
-									"value": ""
+									"value": "",
+									"disabled": true
 								}
 							]
 						}
@@ -3028,7 +3095,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/invoices/municipalServices?description=",
+							"raw": "{{domain}}/api/v3/invoices/municipalServices",
 							"host": [
 								"{{domain}}"
 							],
@@ -3041,7 +3108,8 @@
 							"query": [
 								{
 									"key": "description",
-									"value": ""
+									"value": "",
+									"disabled": true
 								}
 							]
 						}
@@ -3251,7 +3319,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{domain}}/api/v3/pix/transactions?offset=&limit=&status=&type=",
+							"raw": "{{domain}}/api/v3/pix/transactions",
 							"host": [
 								"{{domain}}"
 							],
@@ -3264,19 +3332,23 @@
 							"query": [
 								{
 									"key": "offset",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "limit",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "status",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "type",
-									"value": ""
+									"value": "",
+									"disabled": true
 								}
 							]
 						}
@@ -3657,7 +3729,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/accounts?cpfCnpj=&name=&email=&walletId=&limit=&offset=",
+							"raw": "{{domain}}/api/v3/accounts",
 							"host": [
 								"{{domain}}"
 							],
@@ -3669,27 +3741,33 @@
 							"query": [
 								{
 									"key": "cpfCnpj",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "name",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "email",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "walletId",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "limit",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "offset",
-									"value": ""
+									"value": "",
+									"disabled": true
 								}
 							]
 						}
