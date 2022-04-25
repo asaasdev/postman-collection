@@ -2795,6 +2795,27 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Recuperar número de conta no Asaas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/api/v3/myAccount/accountNumber/",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"myAccount",
+								"accountNumber",
+								""
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
