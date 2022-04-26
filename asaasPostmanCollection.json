@@ -2735,7 +2735,22 @@
 									"key": "dateCreated[le]",
 									"value": "",
 									"disabled": true
-								}
+								},
+                                {
+                                    "key": "estimatedCreditDate[ge]",
+                                    "value": "",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "estimatedCreditDate[le]",
+                                    "value": "",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "externalReference",
+                                    "value": "",
+                                    "disabled": true
+                                }
 							]
 						}
 					},
