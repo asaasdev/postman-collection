@@ -1642,7 +1642,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "    {\r\n        \"value\": 1000.00,\r\n        \"bankAccount\": {\r\n            \"bank\": {\r\n                \"code\": \"237\"\r\n            },\r\n            \"accountName\": \"Conta do Bradesco\",\r\n            \"ownerName\": \"Marcelo Almeida\",\r\n            \"ownerBirthDate\": \"1995-04-12\",\r\n            \"cpfCnpj\": \"52233424611\",\r\n            \"agency\": \"1263\",\r\n            \"account\": \"9999991\",\r\n            \"accountDigit\": \"1\",\r\n            \"bankAccountType\": \"CONTA_CORRENTE\"\r\n        },\r\n        \"operationType\": \"PIX\"\r\n    }"
+                        	"raw": "{\r\n   \"pixAddressKey\": \"+5547999999999\",\r\n   \"pixAddressKeyType\": \"PHONE\",\r\n   \"value\":1000.0,\r\n   \"description\":\"Pix com chave\"\r\n}"
 						},
 						"url": {
 							"raw": "{{domain}}/api/v3/transfers",
