@@ -1642,7 +1642,7 @@
 						],
 						"body": {
 							"mode": "raw",
-                        	"raw": "{\r\n   \"pixAddressKey\": \"+5547999999999\",\r\n   \"pixAddressKeyType\": \"PHONE\",\r\n   \"value\":1000.0,\r\n   \"description\":\"Pix com chave\"\r\n}"
+                        	"raw": "{\r\n   \"pixAddressKey\": \"+5547999999999\",\r\n   \"pixAddressKeyType\": \"PHONE\",\r\n   \"value\":1.0,\r\n   \"description\":\"Pix com chave\"\r\n}"
 						},
 						"url": {
 							"raw": "{{domain}}/api/v3/transfers",
