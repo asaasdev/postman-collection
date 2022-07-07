@@ -3551,6 +3551,28 @@
 								"v3",
 								"pix",
 								"addressKeys"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "statusList",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "",
+									"disabled": true
+								}
 							]
 						}
 					},
