@@ -1588,7 +1588,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/notifications/updateBatchNotification",
+							"raw": "{{domain}}/api/v3/notifications/batch",
 							"host": [
 								"{{domain}}"
 							],
@@ -1596,7 +1596,7 @@
 								"api",
 								"v3",
 								"notifications",
-								"updateBatchNotification"
+								"batch"
 							]
 						}
 					},
