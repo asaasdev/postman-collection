@@ -1566,6 +1566,41 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Atualizar notificação existente em lote",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customer\": \"{CUSTOMER_ID}\",\n    \"notifications\": [\n        {\n        \"id\": \"{NOTIFICATION_ID}\",\n        \"enabled\": true,\n        \"emailEnabledForProvider\": true,\n        \"smsEnabledForProvider\": true,\n        \"emailEnabledForCustomer\": true,\n        \"smsEnabledForCustomer\": true,\n        \"phoneCallEnabledForCustomer\": false,\n        \"whatsappEnabledForCustomer\": false\n        },\n        {\n        \"id\": \"{NOTIFICATION_ID}\",\n        \"enabled\": true,\n        \"emailEnabledForProvider\": true,\n        \"smsEnabledForProvider\": true,\n        \"emailEnabledForCustomer\": true,\n        \"smsEnabledForCustomer\": true,\n        \"phoneCallEnabledForCustomer\": false,\n        \"whatsappEnabledForCustomer\": false\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/api/v3/notifications/batch",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"notifications",
+								"batch"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
