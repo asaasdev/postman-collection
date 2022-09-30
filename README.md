@@ -6,9 +6,7 @@ Adoramos poupar o tempo de todo mundo. Por isso, temos collections no Postman co
 
 ## Atualizar informações no repositório do Postman
 
-Para atualizar a collection no repositório oficial do Asaas no Postman siga os passos abaixo:<br>
-
->  **Obs.:** O deploy já ocorre automaticamente via GitHub Actions, o processo aqui descrito só é necessário caso ocorra falha no processo automático.
+Para atualizar manualmente a collection no repositório oficial do Asaas no Postman siga os passos abaixo:<br>
 
 1. Crie um arquivo .env na raiz deste projeto contendo [sua chave de API](https://postman.co/settings/me/api-keys):
 ```
