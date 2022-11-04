@@ -2791,7 +2791,80 @@
 						}
 					},
 					"response": []
-				}
+				},
+                {
+                    "name": "Recuperar valores de split",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{domain}}/api/v3/finance/split/statistics",
+                            "host": [
+                                "{{domain}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v3",
+                                "finance",
+                                "split",
+                                "statistics"
+                            ],
+                            "query": [
+                                {
+                                    "key": "paymentStatus",
+                                    "value": "",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "paymentAnticipated",
+                                    "value": "",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "paymentDateCreated[ge]",
+                                    "value": "",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "paymentDateCreated[le]",
+                                    "value": "",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "paymentDueDate[ge]",
+                                    "value": "",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "paymentDueDate[le]",
+                                    "value": "",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "paymentEstimatedCreditDate[ge]",
+                                    "value": "",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "paymentEstimatedCreditDate[le]",
+                                    "value": "",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "paymentExternalReference",
+                                    "value": "",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "done",
+                                    "value": "",
+                                    "disabled": true
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                }
 			]
 		},
 		{
