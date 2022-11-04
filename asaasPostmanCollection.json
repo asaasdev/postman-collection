@@ -440,6 +440,11 @@
 									"value": "",
 									"disabled": true
 								},
+                                {
+                                    "key": "user",
+                                    "value": "",
+                                    "disabled": true
+                                },
 								{
 									"key": "offset",
 									"value": "",
