@@ -3858,6 +3858,67 @@
 							"response": []
 						}
 					]
+				},
+				{
+					"name": "Webhook de Recarga de celular",
+					"item": [
+						{
+							"name": "Criar ou atualizar configurações para webhook",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"url\": \"https://www.exemplo.com/webhook/asaas\",\r\n  \"email\": \"marcelo.almeida@gmail.com\",\r\n  \"interrupted\": false,\r\n  \"enabled\": true,\r\n  \"apiVersion\": 3,\r\n  \"authToken\": \"5tLxsL6uoN\"\r\n}"
+								},
+								"url": {
+									"raw": "{{domain}}/api/v3/webhook/mobilePhoneRecharge",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"v3",
+										"webhook",
+										"mobilePhoneRecharge"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Recuperar configuração de webhook",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}/api/v3/webhook/mobilePhoneRecharge",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"v3",
+										"webhook",
+										"mobilePhoneRecharge"
+									]
+								}
+							},
+							"response": []
+						}
+					]
 				}
 			]
 		},
