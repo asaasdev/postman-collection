@@ -752,6 +752,21 @@
 					"response": []
 				},
 				{
+					"name": "Listar carnê de parcelamento",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{domain}}/api/v3/installments/{{id_da_parcela}}/paymentBook"
+					},
+					"response": []
+				},
+				{
 					"name": "Remover parcelamento",
 					"request": {
 						"method": "DELETE",
@@ -943,6 +958,45 @@
 								"subscriptions",
 								"{{id_da_assinatura}}",
 								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar carnê de parcelamento de assinatura",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/jsonapplication/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/v3/subscriptions/{{id_da_assinatura}}/paymentBook",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"subscriptions",
+								"{{id_da_assinatura}}",
+								"paymentBook"
+							],
+							"query": [
+								{
+									"key": "month",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "year",
+									"value": "",
+									"disabled": true
+								}
 							]
 						}
 					},
