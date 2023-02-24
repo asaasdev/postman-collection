@@ -2038,7 +2038,7 @@
 					"response": []
 				},
 				{
-					"name": "Concordar ou discordar do termo aditivo de antecipação",
+					"name": "Concordar ou discordar com Aditivo aos Termos de Uso do ASAAS para contratação do Serviço de Antecipação",
 					"request": {
 						"method": "POST",
 						"header": [
