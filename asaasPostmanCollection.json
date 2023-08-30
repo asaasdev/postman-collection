@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "4164ddd8-d3db-41f3-b234-f9a2870b20fa",
+		"_postman_id": "6337a227-2f11-4ec6-8d35-c911d9bb81f2",
 		"name": "API ASAAS v3",
 		"description": "Nós aqui do Asaas adoramos poupar tempo de todo mundo, por isso fizemos essa collection com todas as nossas APIs. 👍\n\n# Documentação\n\n  \nA documentação completa pode ser acessada [neste link.](https://asaasv3.docs.apiary.io/)\n\nAmbientes disponíveis:\n\n*   Local\n*   Sandbox\n*   Produção\n    \n\nNão esquece de consultar as variáveis da coleção.\n\n## Autenticação\n\nPara testar os exemplos aqui descritos é necessário ter uma conta no Asaas. Caso você ainda não tenha, basta [criar uma conta clicando aqui](https://www.asaas.com/onboarding/createAccount?utm_source=postman) ou [aqui para criar em nossa sandbox](https://sandbox.asaas.com/onboarding/createAccount).\n\nA autenticação é feita através do fornecimento da sua API Key. Ela deve ser transmitida em todas as requisições no header \\`access_token\\`. Caso a API Key seja inválida ou não seja informada, o Asaas retornará `HTTP 401`.  \nAs API Keys são distintas entre os ambientes de Sandbox e Produção, portanto lembre-se de alterá-la quando mudar a URL.  \nPara obter sua API Key [acesse a Aba Integração na área Minha Conta](https://www.asaas.com/config/index?tab=pushNotification).  \nNa collection sua API Key pode ser informada na área de ambientes.\n\n> ***Atenção***:  \n> Sua API Key carrega muitos privilégios, portanto certifique-se de mantê-la protegida. Não informe ela em atendimentos e nem a exponha no front-end da sua aplicação. Além disso, não é possível recuperá-la caso perdida, sendo necessário a geração de uma nova.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
@@ -26,12 +26,11 @@
 							"raw": "{\r\n  \"name\": \"Marcelo Almeida\",\r\n  \"email\": \"marcelo.almeida@gmail.com\",\r\n  \"phone\": \"4738010919\",\r\n  \"mobilePhone\": \"4799376637\",\r\n  \"cpfCnpj\": \"24971563792\",\r\n  \"postalCode\": \"01310-000\",\r\n  \"address\": \"Av. Paulista\",\r\n  \"addressNumber\": \"150\",\r\n  \"complement\": \"Sala 201\",\r\n  \"province\": \"Centro\",\r\n  \"externalReference\": \"12987382\",\r\n  \"notificationDisabled\": false,\r\n  \"additionalEmails\": \"marcelo.almeida2@gmail.com,marcelo.almeida3@gmail.com\",\r\n  \"municipalInscription\": \"46683695908\",\r\n  \"stateInscription\": \"646681195275\",\r\n  \"observations\": \"ótimo pagador, nenhum problema até o momento\"\r\n}"
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/customers",
+							"raw": "{{domain}}/v3/customers",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"customers"
 							]
@@ -51,12 +50,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/customers/{{id_do_cliente}}",
+							"raw": "{{domain}}/v3/customers/{{id_do_cliente}}",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"customers",
 								"{{id_do_cliente}}"
@@ -77,12 +75,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/customers",
+							"raw": "{{domain}}/v3/customers",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"customers"
 							],
@@ -143,12 +140,11 @@
 							"raw": "{\r\n  \"name\": \"Marcelo Almeida\",\r\n  \"email\": \"marcelo.almeida@gmail.com\",\r\n  \"phone\": \"4738010919\",\r\n  \"mobilePhone\": \"4799376637\",\r\n  \"cpfCnpj\": \"24971563792\",\r\n  \"postalCode\": \"01310-000\",\r\n  \"address\": \"Av. Paulista\",\r\n  \"addressNumber\": \"150\",\r\n  \"complement\": \"Sala 201\",\r\n  \"province\": \"Centro\",\r\n  \"externalReference\": \"12987382\",\r\n  \"notificationDisabled\": false,\r\n  \"additionalEmails\": \"marcelo.almeida2@gmail.com,marcelo.almeida3@gmail.com\",\r\n  \"municipalInscription\": \"46683695908\",\r\n  \"stateInscription\": \"646681195275\"\r\n}"
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/customers/{{id_do_cliente}}",
+							"raw": "{{domain}}/v3/customers/{{id_do_cliente}}",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"customers",
 								"{{id_do_cliente}}"
@@ -169,12 +165,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/customers/{{id_do_cliente}}",
+							"raw": "{{domain}}/v3/customers/{{id_do_cliente}}",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"customers",
 								"{{id_do_cliente}}"
@@ -195,12 +190,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/customers/{{id_do_cliente}}/restore",
+							"raw": "{{domain}}/v3/customers/{{id_do_cliente}}/restore",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"customers",
 								"{{id_do_cliente}}",
@@ -231,12 +225,11 @@
 							"raw": "{\r\n  \"customer\": \"{CUSTOMER_ID}\",\r\n  \"billingType\": \"BOLETO\",\r\n  \"dueDate\": \"2017-06-10\",\r\n  \"value\": 100,\r\n  \"description\": \"Pedido 056984\",\r\n  \"externalReference\": \"056984\",\r\n  \"discount\": {\r\n    \"value\": 10,\r\n    \"dueDateLimitDays\": 0\r\n  },\r\n  \"fine\": {\r\n    \"value\": 1\r\n  },\r\n  \"interest\": {\r\n    \"value\": 2\r\n  },\r\n  \"postalService\": false\r\n}"
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/payments",
+							"raw": "{{domain}}/v3/payments",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"payments"
 							]
@@ -261,12 +254,11 @@
 							"raw": "{\r\n  \"customer\": \"cus_0T1mdomVMi39\",\r\n  \"billingType\": \"CREDIT_CARD\",\r\n  \"dueDate\": \"2017-03-15\",\r\n  \"value\": 100,\r\n  \"description\": \"Pedido 056984\",\r\n  \"externalReference\": \"056984\",\r\n  \"creditCard\": {\r\n    \"holderName\": \"marcelo h almeida\",\r\n    \"number\": \"5162306219378829\",\r\n    \"expiryMonth\": \"05\",\r\n    \"expiryYear\": \"2021\",\r\n    \"ccv\": \"318\"\r\n  },\r\n  \"creditCardHolderInfo\": {\r\n    \"name\": \"Marcelo Henrique Almeida\",\r\n    \"email\": \"marcelo.almeida@gmail.com\",\r\n    \"cpfCnpj\": \"24971563792\",\r\n    \"postalCode\": \"89223-005\",\r\n    \"addressNumber\": \"277\",\r\n    \"addressComplement\": null,\r\n    \"phone\": \"4738010919\",\r\n    \"mobilePhone\": \"47998781877\"\r\n  },\r\n  \"creditCardToken\": \"76496073-536f-4835-80db-c45d00f33695\"\r\n}"
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/payments",
+							"raw": "{{domain}}/v3/payments",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"payments"
 							]
@@ -290,12 +282,11 @@
 							"raw": "{\r\n  \"customer\": \"{CUSTOMER_ID}\",\r\n  \"billingType\": \"BOLETO\",\r\n  \"installmentCount\": 6,\r\n  \"installmentValue\": 20,\r\n  \"totalValue\": 120,\r\n  \"dueDate\": \"2017-06-10\",\r\n  \"description\": \"Pedido 056984\",\r\n  \"externalReference\": \"056984\",\r\n  \"discount\": {\r\n    \"value\": 10,\r\n    \"dueDateLimitDays\": 0\r\n  },\r\n  \"fine\": {\r\n    \"value\": 1\r\n  },\r\n  \"interest\": {\r\n    \"value\": 2\r\n  }\r\n}"
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/payments",
+							"raw": "{{domain}}/v3/payments",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"payments"
 							]
@@ -319,12 +310,11 @@
 							"raw": "{\r\n  \"customer\": \"{CUSTOMER_ID}\",\r\n  \"billingType\": \"BOLETO\",\r\n  \"dueDate\": \"2017-06-10\",\r\n  \"value\": 100,\r\n  \"description\": \"Pedido 056984\",\r\n  \"externalReference\": \"056984\",\r\n  \"split\": [\r\n    {\r\n      \"walletId\": \"48548710-9baa-4ec1-a11f-9010193527c6\",\r\n      \"fixedValue\": 20\r\n    },\r\n    {\r\n      \"walletId\": \"0b763922-aa88-4cbe-a567-e3fe8511fa06\",\r\n      \"percentualValue\": 10\r\n    }\r\n  ]\r\n}"
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/payments",
+							"raw": "{{domain}}/v3/payments",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"payments"
 							]
@@ -344,12 +334,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/payments/{{id_da_cobranca}}",
+							"raw": "{{domain}}/v3/payments/{{id_da_cobranca}}",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"payments",
 								"{{id_da_cobranca}}"
@@ -370,12 +359,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/payments",
+							"raw": "{{domain}}/v3/payments",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"payments"
 							],
@@ -440,11 +428,11 @@
 									"value": "",
 									"disabled": true
 								},
-                                {
-                                    "key": "user",
-                                    "value": "",
-                                    "disabled": true
-                                },
+								{
+									"key": "user",
+									"value": "",
+									"disabled": true
+								},
 								{
 									"key": "offset",
 									"value": "",
@@ -476,12 +464,11 @@
 							"raw": "{\r\n  \"billingType\": \"BOLETO\",\r\n  \"dueDate\": \"2017-06-10\",\r\n  \"value\": 100,\r\n  \"description\": \"Pedido 056984\",\r\n  \"externalReference\": \"056984\",\r\n  \"discount\": {\r\n    \"value\": 10,\r\n    \"dueDateLimitDays\": 0\r\n  },\r\n  \"fine\": {\r\n    \"value\": 1\r\n  },\r\n  \"interest\": {\r\n    \"value\": 2\r\n  },\r\n  \"postalService\": false\r\n}"
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/payments/{{id_da_cobranca}}",
+							"raw": "{{domain}}/v3/payments/{{id_da_cobranca}}",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"payments",
 								"{{id_da_cobranca}}"
@@ -502,12 +489,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/payments/{{id_da_cobranca}}",
+							"raw": "{{domain}}/v3/payments/{{id_da_cobranca}}",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"payments",
 								"{{id_da_cobranca}}"
@@ -528,12 +514,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/payments/{{id_da_cobranca}}/restore",
+							"raw": "{{domain}}/v3/payments/{{id_da_cobranca}}/restore",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"payments",
 								"{{id_da_cobranca}}",
@@ -559,12 +544,11 @@
 							"raw": "{\n    \"value\": 5,\n    \"description\": \"Valor a mais\"\n}"
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/payments/{{id_da_cobranca}}/refund",
+							"raw": "{{domain}}/v3/payments/{{id_da_cobranca}}/refund",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"payments",
 								"{{id_da_cobranca}}",
@@ -586,7 +570,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://api.asaas.com/v3/payments",
+							"raw": "https://www.asaas.com/v3/payments",
 							"protocol": "https",
 							"host": [
 								"www",
@@ -594,7 +578,6 @@
 								"com"
 							],
 							"path": [
-								"api",
 								"v3",
 								"payments"
 							]
@@ -614,12 +597,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/payments/{{id_da_cobranca}}/pixQrCode",
+							"raw": "{{domain}}/v3/payments/{{id_da_cobranca}}/pixQrCode",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"payments",
 								"{{id_da_cobranca}}",
@@ -641,12 +623,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/payments/{{id_da_cobranca}}/receiveInCash",
+							"raw": "{{domain}}/v3/payments/{{id_da_cobranca}}/receiveInCash",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"payments",
 								"{{id_da_cobranca}}",
@@ -668,12 +649,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/payments/{{id_da_cobranca}}/undoReceivedInCash",
+							"raw": "{{domain}}/v3/payments/{{id_da_cobranca}}/undoReceivedInCash",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"payments",
 								"{{id_da_cobranca}}",
@@ -700,12 +680,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/installments/{{id_da_parcela}}",
+							"raw": "{{domain}}/v3/installments/{{id_da_parcela}}",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"installments",
 								"{{id_da_parcela}}"
@@ -726,12 +705,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/installments",
+							"raw": "{{domain}}/v3/installments",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"installments"
 							],
@@ -762,7 +740,18 @@
 								"type": "text"
 							}
 						],
-						"url": "{{domain}}/api/v3/installments/{{id_da_parcela}}/paymentBook"
+						"url": {
+							"raw": "{{domain}}/v3/installments/{{id_da_parcela}}/paymentBook",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"v3",
+								"installments",
+								"{{id_da_parcela}}",
+								"paymentBook"
+							]
+						}
 					},
 					"response": []
 				},
@@ -778,12 +767,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/installments/{{id_da_parcela}}",
+							"raw": "{{domain}}/v3/installments/{{id_da_parcela}}",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"installments",
 								"{{id_da_parcela}}"
@@ -804,12 +792,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/installments/{{id_da_parcela}}/refund",
+							"raw": "{{domain}}/v3/installments/{{id_da_parcela}}/refund",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"installments",
 								"{{id_da_parcela}}",
@@ -840,12 +827,11 @@
 							"raw": "{\r\n  \"customer\": \"{CUSTOMER_ID}\",\r\n  \"billingType\": \"BOLETO\",\r\n  \"nextDueDate\": \"2017-05-15\",\r\n  \"value\": 19.9,\r\n  \"cycle\": \"MONTHLY\",\r\n  \"description\": \"Assinatura Plano Pró\",\r\n  \"discount\": {\r\n    \"value\": 10,\r\n    \"dueDateLimitDays\": 0\r\n  },\r\n  \"fine\": {\r\n    \"value\": 1\r\n  },\r\n  \"interest\": {\r\n    \"value\": 2\r\n  }\r\n}"
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/subscriptions",
+							"raw": "{{domain}}/v3/subscriptions",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"subscriptions"
 							]
@@ -865,12 +851,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/subscriptions/{{id_da_assinatura}}",
+							"raw": "{{domain}}/v3/subscriptions/{{id_da_assinatura}}",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"subscriptions",
 								"{{id_da_assinatura}}"
@@ -891,12 +876,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/subscriptions",
+							"raw": "{{domain}}/v3/subscriptions",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"subscriptions"
 							],
@@ -948,12 +932,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/subscriptions/{{id_da_assinatura}}/payments",
+							"raw": "{{domain}}/v3/subscriptions/{{id_da_assinatura}}/payments",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"subscriptions",
 								"{{id_da_assinatura}}",
@@ -975,12 +958,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/subscriptions/{{id_da_assinatura}}/paymentBook",
+							"raw": "{{domain}}/v3/subscriptions/{{id_da_assinatura}}/paymentBook",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"subscriptions",
 								"{{id_da_assinatura}}",
@@ -1018,12 +1000,11 @@
 							"raw": "{\r\n  \"customer\": \"{CUSTOMER_ID}\",\r\n  \"billingType\": \"CREDIT_CARD\",\r\n  \"nextDueDate\": \"2017-05-15\",\r\n  \"value\": 19.9,\r\n  \"cycle\": \"MONTHLY\",\r\n  \"description\": \"Assinatura Plano Pró\",\r\n  \"creditCard\": {\r\n    \"holderName\": \"marcelo h almeida\",\r\n    \"number\": \"5162306219378829\",\r\n    \"expiryMonth\": \"05\",\r\n    \"expiryYear\": \"2021\",\r\n    \"ccv\": \"318\"\r\n  },\r\n  \"creditCardHolderInfo\": {\r\n    \"name\": \"Marcelo Henrique Almeida\",\r\n    \"email\": \"marcelo.almeida@gmail.com\",\r\n    \"cpfCnpj\": \"24971563792\",\r\n    \"postalCode\": \"89223-005\",\r\n    \"addressNumber\": \"277\",\r\n    \"addressComplement\": null,\r\n    \"phone\": \"4738010919\",\r\n    \"mobilePhone\": \"47998781877\"\r\n  },\r\n  \"creditCardToken\": \"a75a1d98-c52d-4a6b-a413-71e00b193c99\"\r\n}"
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/subscriptions",
+							"raw": "{{domain}}/v3/subscriptions",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"subscriptions"
 							]
@@ -1047,12 +1028,11 @@
 							"raw": "{\r\n  \"billingType\": \"BOLETO\",\r\n  \"nextDueDate\": \"2017-06-15\",\r\n  \"value\": 29.9,\r\n  \"cycle\": \"MONTHLY\",\r\n  \"description\": \"Assinatura Plano Pró\",\r\n  \"updatePendingPayments\": true,\r\n  \"discount\": {\r\n    \"value\": 10,\r\n    \"dueDateLimitDays\": 0\r\n  },\r\n  \"fine\": {\r\n    \"value\": 1\r\n  },\r\n  \"interest\": {\r\n    \"value\": 2\r\n  }\r\n}"
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/subscriptions/{{id_da_assinatura}}",
+							"raw": "{{domain}}/v3/subscriptions/{{id_da_assinatura}}",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"subscriptions",
 								"{{id_da_assinatura}}"
@@ -1073,12 +1053,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/subscriptions/{{id_da_assinatura}}",
+							"raw": "{{domain}}/v3/subscriptions/{{id_da_assinatura}}",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"subscriptions",
 								"{{id_da_assinatura}}"
@@ -1099,12 +1078,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/subscriptions/{{id_da_assinatura}}/invoices",
+							"raw": "{{domain}}/v3/subscriptions/{{id_da_assinatura}}/invoices",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"subscriptions",
 								"{{id_da_assinatura}}",
@@ -1147,12 +1125,11 @@
 							"raw": "{\r\n  \"municipalServiceId\": null,\r\n  \"municipalServiceCode\": \"1.01\",\r\n  \"municipalServiceName\": \"Análise e desenvolvimento de sistemas\",\r\n  \"deductions\": 55,\r\n  \"taxes\": {\r\n    \"retainIss\": true,\r\n    \"iss\": 1,\r\n    \"cofins\": 1,\r\n    \"csll\": 1,\r\n    \"inss\": 1,\r\n    \"ir\": 1,\r\n    \"pis\": 1\r\n  },\r\n  \"effectiveDatePeriod\": \"ON_PAYMENT_CONFIRMATION\",\r\n  \"daysBeforeDueDate\": null,\r\n  \"receivedOnly\": null,\r\n  \"observations\": \"Referente aos trabalhos de Junho\"\r\n}"
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/subscriptions/{{id_da_assinatura}}/invoiceSettings",
+							"raw": "{{domain}}/v3/subscriptions/{{id_da_assinatura}}/invoiceSettings",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"subscriptions",
 								"{{id_da_assinatura}}",
@@ -1174,12 +1151,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/subscriptions/{{id_da_assinatura}}/invoiceSettings",
+							"raw": "{{domain}}/v3/subscriptions/{{id_da_assinatura}}/invoiceSettings",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"subscriptions",
 								"{{id_da_assinatura}}",
@@ -1201,12 +1177,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/subscriptions/{{id_da_assinatura}}/invoiceSettings",
+							"raw": "{{domain}}/v3/subscriptions/{{id_da_assinatura}}/invoiceSettings",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"subscriptions",
 								"{{id_da_assinatura}}",
@@ -1228,12 +1203,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/subscriptions/{{id_da_assinatura}}/invoiceSettings",
+							"raw": "{{domain}}/v3/subscriptions/{{id_da_assinatura}}/invoiceSettings",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"subscriptions",
 								"{{id_da_assinatura}}",
@@ -1264,12 +1238,11 @@
 							"raw": "{\r\n  \"name\": \"Venda de livros\",\r\n  \"description\": \"Qualquer livro por apenas R$: 50,00\",\r\n  \"endDate\": \"2021-02-05\",\r\n  \"value\": 50,\r\n  \"billingType\": \"UNDEFINED\",\r\n  \"chargeType\": \"DETACHED\",\r\n  \"dueDateLimitDays\": 10,\r\n  \"subscriptionCycle\": null,\r\n  \"maxInstallmentCount\": 1,\r\n  \"notificationEnabled\": true\r\n}"
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/paymentLinks",
+							"raw": "{{domain}}/v3/paymentLinks",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"paymentLinks"
 							]
@@ -1293,12 +1266,11 @@
 							"raw": "{\r\n  \"name\": \"Venda de livros digitais\",\r\n  \"description\": \"Qualquer livro por apenas R$: 20,00\",\r\n  \"endDate\": \"2022-05-05\",\r\n  \"value\": 20,\r\n  \"active\": true,\r\n  \"billingType\": \"CREDIT_CARD\",\r\n  \"chargeType\": \"INSTALLMENT\",\r\n  \"dueDateLimitDays\": 0,\r\n  \"subscriptionCycle\": null,\r\n  \"maxInstallmentCount\": 5,\r\n  \"notificationEnabled\": false\r\n}"
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/paymentLinks/{{id_do_link_de_pagamento}}",
+							"raw": "{{domain}}/v3/paymentLinks/{{id_do_link_de_pagamento}}",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"paymentLinks",
 								"{{id_do_link_de_pagamento}}"
@@ -1319,12 +1291,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/paymentLinks/{{id_do_link_de_pagamento}}",
+							"raw": "{{domain}}/v3/paymentLinks/{{id_do_link_de_pagamento}}",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"paymentLinks",
 								"{{id_do_link_de_pagamento}}"
@@ -1345,12 +1316,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/paymentLinks",
+							"raw": "{{domain}}/v3/paymentLinks",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"paymentLinks"
 							],
@@ -1397,12 +1367,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/paymentLinks/{{id_do_link_de_pagamento}}",
+							"raw": "{{domain}}/v3/paymentLinks/{{id_do_link_de_pagamento}}",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"paymentLinks",
 								"{{id_do_link_de_pagamento}}"
@@ -1423,12 +1392,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/paymentLinks/{{id_do_link_de_pagamento}}/restore",
+							"raw": "{{domain}}/v3/paymentLinks/{{id_do_link_de_pagamento}}/restore",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"paymentLinks",
 								"{{id_do_link_de_pagamento}}",
@@ -1465,12 +1433,11 @@
 							]
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/paymentLinks/{{id_do_link_de_pagamento}}/images",
+							"raw": "{{domain}}/v3/paymentLinks/{{id_do_link_de_pagamento}}/images",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"paymentLinks",
 								"{{id_do_link_de_pagamento}}",
@@ -1492,12 +1459,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/paymentLinks/{{id_do_link_de_pagamento}}/images/{{id_da_imagem_do_link_de_pagamento}}",
+							"raw": "{{domain}}/v3/paymentLinks/{{id_do_link_de_pagamento}}/images/{{id_da_imagem_do_link_de_pagamento}}",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"paymentLinks",
 								"{{id_do_link_de_pagamento}}",
@@ -1520,12 +1486,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/paymentLinks/{{id_do_link_de_pagamento}}/images",
+							"raw": "{{domain}}/v3/paymentLinks/{{id_do_link_de_pagamento}}/images",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"paymentLinks",
 								"{{id_do_link_de_pagamento}}",
@@ -1547,12 +1512,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/paymentLinks/{{id_do_link_de_pagamento}}/images",
+							"raw": "{{domain}}/v3/paymentLinks/{{id_do_link_de_pagamento}}/images",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"paymentLinks",
 								"{{id_do_link_de_pagamento}}",
@@ -1574,12 +1538,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/paymentLinks/{{id_do_link_de_pagamento}}/images/{{id_da_imagem_do_link_de_pagamento}}/setAsMain",
+							"raw": "{{domain}}/v3/paymentLinks/{{id_do_link_de_pagamento}}/images/{{id_da_imagem_do_link_de_pagamento}}/setAsMain",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"paymentLinks",
 								"{{id_do_link_de_pagamento}}",
@@ -1612,12 +1575,11 @@
 							"raw": "{\r\n  \"enabled\": true,\r\n  \"emailEnabledForProvider\": true,\r\n  \"smsEnabledForProvider\": true,\r\n  \"emailEnabledForCustomer\": true,\r\n  \"smsEnabledForCustomer\": true,\r\n  \"phoneCallEnabledForCustomer\": false,\r\n  \"scheduleOffset\": 5\r\n}"
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/notifications/{{id_da_notificacao}}",
+							"raw": "{{domain}}/v3/notifications/{{id_da_notificacao}}",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"notifications",
 								"{{id_da_notificacao}}"
@@ -1647,12 +1609,11 @@
 							}
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/notifications/batch",
+							"raw": "{{domain}}/v3/notifications/batch",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"notifications",
 								"batch"
@@ -1682,12 +1643,11 @@
 							"raw": "    {\r\n        \"value\": 1000.00,\r\n        \"bankAccount\": {\r\n            \"bank\": {\r\n                \"code\": \"237\"\r\n            },\r\n            \"accountName\": \"Conta do Bradesco\",\r\n            \"ownerName\": \"Marcelo Almeida\",\r\n            \"ownerBirthDate\": \"1995-04-12\",\r\n            \"cpfCnpj\": \"52233424611\",\r\n            \"agency\": \"1263\",\r\n            \"account\": \"9999991\",\r\n            \"accountDigit\": \"1\",\r\n            \"bankAccountType\": \"CONTA_CORRENTE\"\r\n        },\r\n        \"operationType\": \"TED\"\r\n    }"
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/transfers",
+							"raw": "{{domain}}/v3/transfers",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"transfers"
 							]
@@ -1711,12 +1671,11 @@
 							"raw": "    {\r\n        \"value\": 1000.00,\r\n        \"bankAccount\": {\r\n            \"bank\": {\r\n                \"code\": \"237\"\r\n            },\r\n            \"accountName\": \"Conta do Bradesco\",\r\n            \"ownerName\": \"Marcelo Almeida\",\r\n            \"ownerBirthDate\": \"1995-04-12\",\r\n            \"cpfCnpj\": \"52233424611\",\r\n            \"agency\": \"1263\",\r\n            \"account\": \"9999991\",\r\n            \"accountDigit\": \"1\",\r\n            \"bankAccountType\": \"CONTA_CORRENTE\"\r\n        },\r\n        \"operationType\": \"PIX\"\r\n    }"
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/transfers",
+							"raw": "{{domain}}/v3/transfers",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"transfers"
 							]
@@ -1737,15 +1696,14 @@
 						],
 						"body": {
 							"mode": "raw",
-                        	"raw": "{\r\n   \"pixAddressKey\": \"+5547999999999\",\r\n   \"pixAddressKeyType\": \"PHONE\",\r\n   \"value\":1.0,\r\n   \"description\":\"Pix com chave\"\r\n}"
+							"raw": "{\r\n   \"pixAddressKey\": \"+5547999999999\",\r\n   \"pixAddressKeyType\": \"PHONE\",\r\n   \"value\":1.0,\r\n   \"description\":\"Pix com chave\"\r\n}"
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/transfers",
+							"raw": "{{domain}}/v3/transfers",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"transfers"
 							]
@@ -1769,12 +1727,11 @@
 							"raw": "    {\r\n        \"value\": 1000.00,\r\n        \"bankAccount\": {\r\n            \"bank\": {\r\n                \"code\": \"237\"\r\n            },\r\n            \"accountName\": \"Conta do Bradesco\",\r\n            \"ownerName\": \"Marcelo Almeida\",\r\n            \"ownerBirthDate\": \"1995-04-12\",\r\n            \"cpfCnpj\": \"52233424611\",\r\n            \"agency\": \"1263\",\r\n            \"account\": \"9999991\",\r\n            \"accountDigit\": \"1\",\r\n            \"bankAccountType\": \"CONTA_CORRENTE\"\r\n        },\r\n        \"operationType\": \"PIX\",\r\n        \"scheduleDate\": \"2022-04-29\"\r\n    }"
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/transfers",
+							"raw": "{{domain}}/v3/transfers",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"transfers"
 							]
@@ -1798,12 +1755,11 @@
 							"raw": "{\r\n  \"value\": 1000,\r\n  \"walletId\": \"0021c712-d963-4d86-a59d-031e7ac51a2e\"\r\n}"
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/transfers",
+							"raw": "{{domain}}/v3/transfers",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"transfers"
 							]
@@ -1823,12 +1779,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/transfers/{{id_da_transferencia}}",
+							"raw": "{{domain}}/v3/transfers/{{id_da_transferencia}}",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"transfers",
 								"{{id_da_transferencia}}"
@@ -1849,12 +1804,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/transfers",
+							"raw": "{{domain}}/v3/transfers",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"transfers"
 							],
@@ -1916,12 +1870,11 @@
 							]
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/anticipations",
+							"raw": "{{domain}}/v3/anticipations",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"anticipations"
 							]
@@ -1945,12 +1898,11 @@
 							"raw": "{\r\n  \"installment\": null,\r\n  \"payment\": \"pay_626366773834\"\r\n}"
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/anticipations/simulate",
+							"raw": "{{domain}}/v3/anticipations/simulate",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"anticipations",
 								"simulate"
@@ -1971,12 +1923,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/anticipations/{{id_da_antecipacao}}",
+							"raw": "{{domain}}/v3/anticipations/{{id_da_antecipacao}}",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"anticipations",
 								"{{id_da_antecipacao}}"
@@ -1997,12 +1948,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/anticipations",
+							"raw": "{{domain}}/v3/anticipations",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"anticipations"
 							],
@@ -2053,12 +2003,11 @@
 							"raw": "{\r\n  \"agreed\": true\r\n}"
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/anticipations/agreement/sign",
+							"raw": "{{domain}}/v3/anticipations/agreement/sign",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"anticipations",
 								"agreement",
@@ -2155,12 +2104,11 @@
 							]
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/paymentDunnings",
+							"raw": "{{domain}}/v3/paymentDunnings",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"paymentDunnings"
 							]
@@ -2184,12 +2132,11 @@
 							"raw": "\r\n{\r\n  \"payment\": \"pay_080225913252\"\r\n}"
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/paymentDunnings/simulate",
+							"raw": "{{domain}}/v3/paymentDunnings/simulate",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"paymentDunnings",
 								"simulate"
@@ -2210,12 +2157,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/paymentDunnings/{{id_da_recuperacao}}",
+							"raw": "{{domain}}/v3/paymentDunnings/{{id_da_recuperacao}}",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"paymentDunnings",
 								"{{id_da_recuperacao}}"
@@ -2236,12 +2182,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/paymentDunnings",
+							"raw": "{{domain}}/v3/paymentDunnings",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"paymentDunnings"
 							],
@@ -2298,12 +2243,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/paymentDunnings/{{id_da_recuperacao}}/history",
+							"raw": "{{domain}}/v3/paymentDunnings/{{id_da_recuperacao}}/history",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"paymentDunnings",
 								"{{id_da_recuperacao}}",
@@ -2337,12 +2281,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/paymentDunnings/{{id_da_recuperacao}}/partialPayments",
+							"raw": "{{domain}}/v3/paymentDunnings/{{id_da_recuperacao}}/partialPayments",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"paymentDunnings",
 								"{{id_da_recuperacao}}",
@@ -2376,12 +2319,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/paymentDunnings/paymentsAvailableForDunning",
+							"raw": "{{domain}}/v3/paymentDunnings/paymentsAvailableForDunning",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"paymentDunnings",
 								"paymentsAvailableForDunning"
@@ -2424,12 +2366,11 @@
 							]
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/paymentDunnings/{{id_da_recuperacao}}/documents",
+							"raw": "{{domain}}/v3/paymentDunnings/{{id_da_recuperacao}}/documents",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"paymentDunnings",
 								"{{id_da_recuperacao}}",
@@ -2451,12 +2392,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/paymentDunnings/{{id_da_recuperacao}}/cancel",
+							"raw": "{{domain}}/v3/paymentDunnings/{{id_da_recuperacao}}/cancel",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"paymentDunnings",
 								"{{id_da_recuperacao}}",
@@ -2487,12 +2427,11 @@
 							"raw": "{\r\n  \"identificationField\": \"03399.77779 29900.000000 04751.101017 1 81510000002990\",\r\n  \"scheduleDate\": \"2020-03-15\",\r\n  \"description\": \"Celular 03/12\",\r\n  \"discount\": 2,\r\n  \"dueDate\": \"2020-03-30\",\r\n  \"value\": 98\r\n}"
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/bill",
+							"raw": "{{domain}}/v3/bill",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"bill"
 							]
@@ -2516,12 +2455,11 @@
 							"raw": "{\r\n  \"identificationField\": \"03399.77779 29900.000000 04751.101017 1 81510000002990\",\r\n  \"barCode\": \"34197830200000050001090000010231248018531000\"\r\n}"
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/bill/simulate",
+							"raw": "{{domain}}/v3/bill/simulate",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"bill",
 								"simulate"
@@ -2542,12 +2480,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/bill/{{id_do_pagamento_de_conta}}",
+							"raw": "{{domain}}/v3/bill/{{id_do_pagamento_de_conta}}",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"bill",
 								"{{id_do_pagamento_de_conta}}"
@@ -2568,12 +2505,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/bill",
+							"raw": "{{domain}}/v3/bill",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"bill"
 							],
@@ -2605,12 +2541,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/bill/{{id_do_pagamento_de_conta}}/cancel",
+							"raw": "{{domain}}/v3/bill/{{id_do_pagamento_de_conta}}/cancel",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"bill",
 								"{{id_do_pagamento_de_conta}}",
@@ -2641,12 +2576,11 @@
 							"raw": "{\r\n  \"customer\": \"cus_000000002750\",\r\n  \"cpfCnpj\": null,\r\n  \"state\": \"SC\"\r\n}"
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/creditBureauReport",
+							"raw": "{{domain}}/v3/creditBureauReport",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"creditBureauReport"
 							]
@@ -2666,12 +2600,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/creditBureauReport/{{id_da_consulta_serasa}}",
+							"raw": "{{domain}}/v3/creditBureauReport/{{id_da_consulta_serasa}}",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"creditBureauReport",
 								"{{id_da_consulta_serasa}}"
@@ -2692,12 +2625,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/creditBureauReport",
+							"raw": "{{domain}}/v3/creditBureauReport",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"creditBureauReport"
 							],
@@ -2744,12 +2676,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/financialTransactions",
+							"raw": "{{domain}}/v3/financialTransactions",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"financialTransactions"
 							],
@@ -2790,12 +2721,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{domain}}/api/v3/finance/balance",
+							"raw": "{{domain}}/v3/finance/balance",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"finance",
 								"balance"
@@ -2810,12 +2740,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{domain}}/api/v3/finance/payment/statistics",
+							"raw": "{{domain}}/v3/finance/payment/statistics",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"finance",
 								"payment",
@@ -2882,79 +2811,78 @@
 					},
 					"response": []
 				},
-                {
-                    "name": "Recuperar valores de split",
-                    "request": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                            "raw": "{{domain}}/api/v3/finance/split/statistics",
-                            "host": [
-                                "{{domain}}"
-                            ],
-                            "path": [
-                                "api",
-                                "v3",
-                                "finance",
-                                "split",
-                                "statistics"
-                            ],
-                            "query": [
-                                {
-                                    "key": "paymentStatus",
-                                    "value": "",
-                                    "disabled": true
-                                },
-                                {
-                                    "key": "paymentAnticipated",
-                                    "value": "",
-                                    "disabled": true
-                                },
-                                {
-                                    "key": "paymentDateCreated[ge]",
-                                    "value": "",
-                                    "disabled": true
-                                },
-                                {
-                                    "key": "paymentDateCreated[le]",
-                                    "value": "",
-                                    "disabled": true
-                                },
-                                {
-                                    "key": "paymentDueDate[ge]",
-                                    "value": "",
-                                    "disabled": true
-                                },
-                                {
-                                    "key": "paymentDueDate[le]",
-                                    "value": "",
-                                    "disabled": true
-                                },
-                                {
-                                    "key": "paymentEstimatedCreditDate[ge]",
-                                    "value": "",
-                                    "disabled": true
-                                },
-                                {
-                                    "key": "paymentEstimatedCreditDate[le]",
-                                    "value": "",
-                                    "disabled": true
-                                },
-                                {
-                                    "key": "paymentExternalReference",
-                                    "value": "",
-                                    "disabled": true
-                                },
-                                {
-                                    "key": "done",
-                                    "value": "",
-                                    "disabled": true
-                                }
-                            ]
-                        }
-                    },
-                    "response": []
-                }
+				{
+					"name": "Recuperar valores de split",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/v3/finance/split/statistics",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"v3",
+								"finance",
+								"split",
+								"statistics"
+							],
+							"query": [
+								{
+									"key": "paymentStatus",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "paymentAnticipated",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "paymentDateCreated[ge]",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "paymentDateCreated[le]",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "paymentDueDate[ge]",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "paymentDueDate[le]",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "paymentEstimatedCreditDate[ge]",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "paymentEstimatedCreditDate[le]",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "paymentExternalReference",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "done",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
 			]
 		},
 		{
@@ -2972,12 +2900,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/wallets",
+							"raw": "{{domain}}/v3/wallets",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"wallets"
 							]
@@ -2997,12 +2924,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/myAccount/",
+							"raw": "{{domain}}/v3/myAccount/",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"myAccount",
 								""
@@ -3053,12 +2979,11 @@
 							]
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/myAccount/paymentCheckoutConfig/",
+							"raw": "{{domain}}/v3/myAccount/paymentCheckoutConfig/",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"myAccount",
 								"paymentCheckoutConfig",
@@ -3080,12 +3005,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/myAccount/paymentCheckoutConfig/",
+							"raw": "{{domain}}/v3/myAccount/paymentCheckoutConfig/",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"myAccount",
 								"paymentCheckoutConfig",
@@ -3101,12 +3025,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{domain}}/api/v3/myAccount/accountNumber/",
+							"raw": "{{domain}}/v3/myAccount/accountNumber/",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"myAccount",
 								"accountNumber",
@@ -3137,12 +3060,11 @@
 							"raw": "{\r\n  \"payment\": \"pay_637959110194\",\r\n  \"installment\": null,\r\n  \"serviceDescription\": \"Nota fiscal da Fatura 101940. \\nDescrição dos Serviços: ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\",\r\n  \"observations\": \"Mensal referente aos trabalhos de Junho.\",\r\n  \"value\": 300,\r\n  \"deductions\": 0,\r\n  \"effectiveDate\": \"2018-07-03\",\r\n  \"externalReference\": null,\r\n  \"taxes\": {\r\n    \"retainIss\": false,\r\n    \"iss\": 3,\r\n    \"cofins\": 3,\r\n    \"csll\": 1,\r\n    \"inss\": 0,\r\n    \"ir\": 1.5,\r\n    \"pis\": 0.65\r\n  },\r\n  \"municipalServiceId\": null,\r\n  \"municipalServiceCode\": \"1.01\",\r\n  \"municipalServiceName\": \"Análise e desenvolvimento de sistemas\"\r\n}"
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/invoices",
+							"raw": "{{domain}}/v3/invoices",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"invoices"
 							]
@@ -3166,12 +3088,11 @@
 							"raw": "{\r\n  \"serviceDescription\": \"Nota fiscal da Fatura 101940. \\nDescrição dos Serviços: ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\",\r\n  \"observations\": \"Mensal referente aos trabalhos de Junho.\",\r\n  \"value\": 300,\r\n  \"deductions\": 10,\r\n  \"effectiveDate\": \"2018-07-03\",\r\n  \"externalReference\": null,\r\n  \"taxes\": {\r\n    \"retainIss\": false,\r\n    \"iss\": 3,\r\n    \"cofins\": 3,\r\n    \"csll\": 1,\r\n    \"inss\": 0,\r\n    \"ir\": 1.5,\r\n    \"pis\": 0.65\r\n  }\r\n}"
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/invoices/{{id_da_nota_fiscal}}",
+							"raw": "{{domain}}/v3/invoices/{{id_da_nota_fiscal}}",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"invoices",
 								"{{id_da_nota_fiscal}}"
@@ -3192,12 +3113,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/invoices/{{id_da_nota_fiscal}}",
+							"raw": "{{domain}}/v3/invoices/{{id_da_nota_fiscal}}",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"invoices",
 								"{{id_da_nota_fiscal}}"
@@ -3218,12 +3138,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/invoices",
+							"raw": "{{domain}}/v3/invoices",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"invoices"
 							],
@@ -3280,12 +3199,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/invoices/{{id_da_nota_fiscal}}/authorize",
+							"raw": "{{domain}}/v3/invoices/{{id_da_nota_fiscal}}/authorize",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"invoices",
 								"{{id_da_nota_fiscal}}",
@@ -3307,12 +3225,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/invoices/{{id_da_nota_fiscal}}/cancel",
+							"raw": "{{domain}}/v3/invoices/{{id_da_nota_fiscal}}/cancel",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"invoices",
 								"{{id_da_nota_fiscal}}",
@@ -3334,12 +3251,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/invoices/municipalServices",
+							"raw": "{{domain}}/v3/invoices/municipalServices",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"invoices",
 								"municipalServices"
@@ -3372,12 +3288,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/customerFiscalInfo/municipalOptions",
+							"raw": "{{domain}}/v3/customerFiscalInfo/municipalOptions",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"customerFiscalInfo",
 								"municipalOptions"
@@ -3483,12 +3398,11 @@
 							]
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/customerFiscalInfo",
+							"raw": "{{domain}}/v3/customerFiscalInfo",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"customerFiscalInfo"
 							]
@@ -3508,12 +3422,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/customerFiscalInfo",
+							"raw": "{{domain}}/v3/customerFiscalInfo",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"customerFiscalInfo"
 							]
@@ -3532,12 +3445,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{domain}}/api/v3/pix/transactions?id=",
+							"raw": "{{domain}}/v3/pix/transactions?id=",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"pix",
 								"transactions"
@@ -3558,12 +3470,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{domain}}/api/v3/pix/transactions",
+							"raw": "{{domain}}/v3/pix/transactions",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"pix",
 								"transactions"
@@ -3600,12 +3511,11 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "{{domain}}/api/v3/pix/transactions/{{id_da_transacao_pix}}/cancel",
+							"raw": "{{domain}}/v3/pix/transactions/{{id_da_transacao_pix}}/cancel",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"pix",
 								"transactions",
@@ -3631,12 +3541,11 @@
 							}
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/pix/qrCodes/static",
+							"raw": "{{domain}}/v3/pix/qrCodes/static",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"pix",
 								"qrCodes",
@@ -3661,12 +3570,11 @@
 							}
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/pix/qrCodes/decode",
+							"raw": "{{domain}}/v3/pix/qrCodes/decode",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"pix",
 								"qrCodes",
@@ -3691,12 +3599,11 @@
 							}
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/pix/qrCodes/pay",
+							"raw": "{{domain}}/v3/pix/qrCodes/pay",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"pix",
 								"qrCodes",
@@ -3721,12 +3628,11 @@
 							}
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/pix/addressKeys",
+							"raw": "{{domain}}/v3/pix/addressKeys",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"pix",
 								"addressKeys"
@@ -3741,12 +3647,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{domain}}/api/v3/pix/addressKeys",
+							"raw": "{{domain}}/v3/pix/addressKeys",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"pix",
 								"addressKeys"
@@ -3783,12 +3688,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{domain}}/api/v3/pix/addressKeys/{{id_da_chave_pix}}",
+							"raw": "{{domain}}/v3/pix/addressKeys/{{id_da_chave_pix}}",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"pix",
 								"addressKeys",
@@ -3804,12 +3708,11 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{domain}}/api/v3/pix/addressKeys/{{id_da_chave_pix}}",
+							"raw": "{{domain}}/v3/pix/addressKeys/{{id_da_chave_pix}}",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"pix",
 								"addressKeys",
@@ -3843,12 +3746,11 @@
 									"raw": "{\r\n  \"url\": \"https://www.exemplo.com/webhook/asaas\",\r\n  \"email\": \"marcelo.almeida@gmail.com\",\r\n  \"interrupted\": false,\r\n  \"enabled\": true,\r\n  \"apiVersion\": 3,\r\n  \"authToken\": \"5tLxsL6uoN\"\r\n}"
 								},
 								"url": {
-									"raw": "{{domain}}/api/v3/webhook",
+									"raw": "{{domain}}/v3/webhook",
 									"host": [
 										"{{domain}}"
 									],
 									"path": [
-										"api",
 										"v3",
 										"webhook"
 									]
@@ -3868,12 +3770,11 @@
 									}
 								],
 								"url": {
-									"raw": "{{domain}}/api/v3/webhook",
+									"raw": "{{domain}}/v3/webhook",
 									"host": [
 										"{{domain}}"
 									],
 									"path": [
-										"api",
 										"v3",
 										"webhook"
 									]
@@ -3902,12 +3803,11 @@
 									"raw": "{\r\n  \"url\": \"https://www.exemplo.com/webhook/asaas\",\r\n  \"email\": \"marcelo.almeida@gmail.com\",\r\n  \"interrupted\": false,\r\n  \"enabled\": true,\r\n  \"apiVersion\": 3,\r\n  \"authToken\": \"5tLxsL6uoN\"\r\n}"
 								},
 								"url": {
-									"raw": "{{domain}}/api/v3/webhook/invoice",
+									"raw": "{{domain}}/v3/webhook/invoice",
 									"host": [
 										"{{domain}}"
 									],
 									"path": [
-										"api",
 										"v3",
 										"webhook",
 										"invoice"
@@ -3928,12 +3828,11 @@
 									}
 								],
 								"url": {
-									"raw": "{{domain}}/api/v3/webhook/invoice",
+									"raw": "{{domain}}/v3/webhook/invoice",
 									"host": [
 										"{{domain}}"
 									],
 									"path": [
-										"api",
 										"v3",
 										"webhook",
 										"invoice"
@@ -3963,12 +3862,11 @@
 									"raw": "{\r\n  \"url\": \"https://www.exemplo.com/webhook/asaas\",\r\n  \"email\": \"marcelo.almeida@gmail.com\",\r\n  \"interrupted\": false,\r\n  \"enabled\": true,\r\n  \"apiVersion\": 3,\r\n  \"authToken\": \"5tLxsL6uoN\"\r\n}"
 								},
 								"url": {
-									"raw": "{{domain}}/api/v3/webhook/mobilePhoneRecharge",
+									"raw": "{{domain}}/v3/webhook/mobilePhoneRecharge",
 									"host": [
 										"{{domain}}"
 									],
 									"path": [
-										"api",
 										"v3",
 										"webhook",
 										"mobilePhoneRecharge"
@@ -3989,12 +3887,11 @@
 									}
 								],
 								"url": {
-									"raw": "{{domain}}/api/v3/webhook/mobilePhoneRecharge",
+									"raw": "{{domain}}/v3/webhook/mobilePhoneRecharge",
 									"host": [
 										"{{domain}}"
 									],
 									"path": [
-										"api",
 										"v3",
 										"webhook",
 										"mobilePhoneRecharge"
@@ -4026,12 +3923,11 @@
 							"raw": "{\r\n    \"name\": \"Conta criada via API\",\r\n    \"email\": \"emaildaempresa@gmail.com\",\r\n    \"cpfCnpj\": \"66625514000140\",\r\n    \"companyType\": \"MEI\",\r\n    \"birthDate\": null,\r\n    \"phone\": \"11 32300606\",\r\n    \"mobilePhone\": \"11 988451155\",\r\n    \"address\": \"Av. Rolf Wiest\",\r\n    \"addressNumber\": \"277\",\r\n    \"complement\": \"Sala 502\",\r\n    \"province\": \"Bom Retiro\",\r\n    \"postalCode\": \"89223005\"\r\n}"
 						},
 						"url": {
-							"raw": "{{domain}}/api/v3/accounts",
+							"raw": "{{domain}}/v3/accounts",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"accounts"
 							]
@@ -4051,12 +3947,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/api/v3/accounts",
+							"raw": "{{domain}}/v3/accounts",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"api",
 								"v3",
 								"accounts"
 							],
