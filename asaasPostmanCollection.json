@@ -586,7 +586,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://www.asaas.com/api/v3/payments",
+							"raw": "https://api.asaas.com/v3/payments",
 							"protocol": "https",
 							"host": [
 								"www",
