@@ -2709,6 +2709,48 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Exportar extrato",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/v3/financialTransactions/export",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"v3",
+								"financialTransactions",
+								"export"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "endDate",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "fileType",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
