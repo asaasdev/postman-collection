@@ -3251,16 +3251,24 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/v3/invoices/municipalServices",
+							"raw": "{{domain}}/v3/fiscalInfo/services?limit=10&offset=0",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
 								"v3",
-								"invoices",
-								"municipalServices"
+								"fiscalInfo",
+								"services"
 							],
 							"query": [
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								},
 								{
 									"key": "description",
 									"value": "",
