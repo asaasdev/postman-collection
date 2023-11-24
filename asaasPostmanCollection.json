@@ -3263,11 +3263,13 @@
 							"query": [
 								{
 									"key": "limit",
-									"value": "10"
+									"value": "10",
+									"disabled": true
 								},
 								{
 									"key": "offset",
-									"value": "0"
+									"value": "0",
+									"disabled": true
 								},
 								{
 									"key": "description",
