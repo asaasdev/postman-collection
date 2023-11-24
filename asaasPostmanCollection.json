@@ -3251,7 +3251,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/v3/fiscalInfo/services?limit=10&offset=0",
+							"raw": "{{domain}}/v3/fiscalInfo/services",
 							"host": [
 								"{{domain}}"
 							],
