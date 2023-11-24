@@ -3263,12 +3263,12 @@
 							"query": [
 								{
 									"key": "limit",
-									"value": "10",
+									"value": "",
 									"disabled": true
 								},
 								{
 									"key": "offset",
-									"value": "0",
+									"value": "",
 									"disabled": true
 								},
 								{
