@@ -730,6 +730,44 @@
 					"response": []
 				},
 				{
+					"name": "Listar cobranças de um parcelamento",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/v3/installments/{{id_da_parcela}}/payments",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"v3",
+								"installments",
+								"{{id_da_parcela}}",
+								"payments"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Listar carnê de parcelamento",
 					"request": {
 						"method": "GET",
