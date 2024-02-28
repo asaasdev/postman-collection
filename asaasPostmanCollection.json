@@ -2024,36 +2024,6 @@
 						}
 					},
 					"response": []
-				},
-				{
-					"name": "Concordar ou discordar com Aditivo aos Termos de Uso do ASAAS para contratação do Serviço de Antecipação",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"agreed\": true\r\n}"
-						},
-						"url": {
-							"raw": "{{domain}}/v3/anticipations/agreement/sign",
-							"host": [
-								"{{domain}}"
-							],
-							"path": [
-								"v3",
-								"anticipations",
-								"agreement",
-								"sign"
-							]
-						}
-					},
-					"response": []
 				}
 			]
 		},
