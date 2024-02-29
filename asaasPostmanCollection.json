@@ -674,6 +674,10 @@
 								"type": "text"
 							}
 						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"value\": 100,\r\n  \"installmentCount\": 10,\r\n  \"billingTypes\": [\"CREDIT_CARD\"]\r\n}"
+						},
 						"url": {
 							"raw": "{{domain}}/v3/payments/simulate",
 							"host": [
