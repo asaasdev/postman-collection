@@ -662,6 +662,35 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Simulador de taxas",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"value\": 100,\r\n  \"installmentCount\": 10,\r\n  \"billingTypes\": [\"CREDIT_CARD\"]\r\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/v3/payments/simulate",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"v3",
+								"payments",
+								"simulate"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
